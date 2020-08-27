@@ -1,14 +1,24 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  Container
+} from 'reactstrap';
 
-const Navbar = class extends React.Component {
+import config from '../config/config'
+const AppNavbar = class extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       active: false,
       navBarActiveClass: '',
+      isOpen: false 
     }
   }
 
@@ -32,67 +42,43 @@ const Navbar = class extends React.Component {
     )
   }
 
+  toggle = () => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    })
+  }
+
   render() {
     return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
+    <div className='appNavBar main-navigation'>
+    <Navbar expand="md">
+      <Container fluid >
+    <NavbarBrand><Link to="/">{config.siteTitle} | <span>{config.siteSubtitle}</span></Link></NavbarBrand>
+        <NavbarToggler onClick={this.toggle} />
+        <Collapse isOpen={this.state.isOpen} navbar >
+          <Nav className="" navbar >
+            <NavItem>
+              <Link to="/projects">
+                <NavLink>Projects</NavLink>
               </Link>
-              <Link className="navbar-item" to="/products">
-                Products
+            </NavItem>
+            <NavItem>
+              <Link to="/about">
+                <NavLink>About</NavLink>
               </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
+            </NavItem>
+            <NavItem>
+              <Link to="/resume">
+                <NavLink>Resume</NavLink>
               </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-    )
+            </NavItem >
+          </Nav>
+        </Collapse>
+      </Container>
+    </Navbar>
+  </div>
+    );
   }
 }
 
-export default Navbar
+export default AppNavbar

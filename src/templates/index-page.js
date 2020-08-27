@@ -1,129 +1,116 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import Fade from 'react-reveal/Fade';
 
 import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+import VideoBG from '../components/VideoBG'
+import config from '../config/config'
+import projects from '../config/projects'
+
+let fp1 = projects.find(project => project.title === config.featuredProject1);
+let sectionStyle = {
+  backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/img/" + fp1.image + "')",
+  backgroundSize: "cover"
+}
+// Once grabbed, setup CSS for featured Section based on preview images
+let fp2 = projects.find(project => project.title === config.featuredProject2);
+let sectionStyle2 = {
+  backgroundImage: "linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8)), url('/img/" + fp2.image + "')",
+  backgroundSize: "cover"
+}
 
 export const IndexPageTemplate = ({
-  image,
-  title,
+  tagline,
+  tagImage,
+  featuredProject1,
+  featuredProject2,
+  manifestoSection,
+  bioSection,
   heading,
   subheading,
   mainpitch,
   description,
   intro,
 }) => (
-  <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
+  <div class="homePage">
+    <VideoBG></VideoBG>
+    <section class="titleSection">
+      <p class="videoInfo"><Fade top>This, and all videos on this site, are captured in MSDP: a multimedia platform created by Hugh Lobel</Fade></p>
+      <div className='container titleContent'>
+        <Fade top>
+          <div>
+            <h2>{tagline}</h2>
+          </div>
+        </Fade>
+        <Fade clear>
+          <div className="titleImage">
+            <img src={`img/${tagImage}`} alt="Hugh Lobel speaking in the Atlas Building at CU Boulder"/>
+          </div>
+        </Fade>
       </div>
-    </div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+    </section>
+    <section className="fullScreen homeScreen">
+      <Fade clear>
+      <div className="fullRow">
+        <div className="twoColumns featuredProjects">
+          <div class="featuredTitle"><h2>Featured Projects</h2></div>
+          <a className="featuredOne perfectCenter" style={ sectionStyle }>
+            <Link to={`/projects/${fp1.title}`} className="perfectCenter">
+                <Fade top><h3 className="white">{fp1.title}</h3><br /></Fade> 
+                <Fade clear><p className="white category">{fp1.category}</p><br /></Fade> 
+                <Fade clear><p className="white">{fp1.excerpt}</p></Fade>
+            </Link>
+          </a>
+          <a className="featuredTwo perfectCenter" style={ sectionStyle2 }>
+            <Link to={`/projects/${fp2.title}`} className="perfectCenter">
+              <Fade top><h3>{fp2.title}</h3><br /></Fade> 
+              <Fade clear><p className="category">{fp2.category}</p><br /></Fade> 
+              <Fade clear><p>{fp2.excerpt}</p></Fade> 
+            </Link>
+          </a>
+        </div>
+      </div>
+      </Fade>
+    </section>
+    <section class="manifestoSection">
+      <div className='container manifestoContent'>
+        <Fade><h2>{manifestoSection}</h2></Fade>
+        <div className="actionCall twoColumns">
+          <div className="diveIn">
+            <Fade><h3>Dive In...</h3></Fade>
+            <Link to="/projects"><Fade><div><button className="button-transparent"><span>Explore Projects</span></button></div></Fade></Link>
+          </div>
+          <div className="reachOut">
+            <Fade><h3>...or Reach Out!</h3></Fade>
+            <Fade><div><button className="button-transparent openModal"><span>Contact</span></button></div></Fade>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="bioSection">
+      <div className='container bioContent'>
+        <Fade>
+          <h2>About Hugh Lobel</h2>
+          <p className='bioContent'>{bioSection}</p>
+          <div className="actionCall threeColumns">
+            <Link to="/about"><Fade><div><button className="button-transparent"><span>Read Full Bio</span></button></div></Fade></Link>
+            <Link to="/developer-resume"><Fade><div><button className="button-transparent"><span>View Developer Resume</span></button></div></Fade></Link>
+            <Link to="/artist-cv"><Fade><div><button className="button-transparent"><span>View Artist CV</span></button></div></Fade></Link>
+          </div>
+        </Fade>
       </div>
     </section>
   </div>
 )
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
+  tagline: PropTypes.string,
+  tagImage: PropTypes.string,
+  featuredProject1: PropTypes.string,
+  featuredProject2: PropTypes.string,
+  manifestoSection: PropTypes.string,
+  bioSection: PropTypes.string,
 }
 
 const IndexPage = ({ data }) => {
@@ -132,13 +119,12 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        tagline={frontmatter.tagline}
+        tagImage={frontmatter.tagImage}
+        featuredProject1={frontmatter.featuredProject1}
+        featuredProject2={frontmatter.featuredProject2}
+        manifestoSection={frontmatter.manifestoSection}
+        bioSection={frontmatter.bioSection}
       />
     </Layout>
   )
@@ -158,35 +144,12 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
+        tagline
+        tagImage
+        featuredProject1
+        featuredProject2
+        manifestoSection
+        bioSection
       }
     }
   }

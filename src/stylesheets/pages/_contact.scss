@@ -1,0 +1,151 @@
+.contactModal {
+    z-index:0;
+    display: none;
+    place-items: center;
+    position:fixed;
+    top:0;
+    bottom:0;
+    opacity: 0;
+    width:100%;
+    background-color:rgba(0,0,0,0.5);
+    transition: all ease-in-out 0.35s;
+    &.open {
+        .formSection {
+            display: grid;
+            opacity: 1;
+        }
+    }
+    .formSection {
+        box-shadow: rgba(0, 0, 0, 0.65) 0px 0px 20px 15px;
+        display:none;
+        cursor: auto;
+        width: 50%;
+        margin: auto;
+        margin-top: 25px;
+        background-color: #0F9682;
+        padding: 25px 5%;
+        position: relative;
+        place-content: center;
+        border-radius: 10px;
+        opacity: 0;
+        .modalCloseIcon {
+            position: absolute;
+            right: 2.5%;
+            top: 2.5%;
+            color: $white;
+            cursor: pointer;
+        }
+        h2 {
+            color: $white;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            line-height: 1.6rem;
+            color: $white;
+            text-align: center;
+            max-width: 900px;
+            margin: auto;
+            margin-bottom: 15px;
+        }
+        br {
+            margin-bottom: 1.7rem;
+        }
+        .contactHidden{
+            display: none;
+        }
+        form {
+            width: 100%;
+            max-width: 500px;
+            color: $white;
+            label, label input, label textarea {
+                width: 100%;
+                margin-bottom: 15px;
+                -webkit-font-smoothing: antialiased;
+                font-size: 1.2rem;
+            }
+            label input, label textarea {
+                padding: 10px;
+                color: $black;
+            }
+        }
+    }
+}
+// Version 2
+.contactModal {
+    opacity: 1;
+    z-index: 10000;
+    display: grid;
+    top: calc(100vh - 80px);
+    left:  calc(100vw - 200px);
+    right: 20px;
+    bottom: 20px;
+    width: 175px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: $teal-dark;
+    cursor: pointer;
+    .formOpen {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        svg {margin-right: 10px; color: $white;}
+        p {color: $white; font-weight: bold; font-size: 22px;}
+    }
+    &.closed {
+        animation: float 5.5s ease-in-out $time-short infinite;
+    }
+    &.open {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color:rgba(0,0,0,0.5);
+        border-radius: 0;
+        .formOpen {
+            display: none;
+        }
+    }
+    &.closed:hover {
+        background-color: #0B7D6C;
+        border-radius: 15px;
+        width: 200px;
+        height: 70px;
+        top: calc(100vh - 90px);
+        left:  calc(100vw - 230px);
+        animation: none;
+        svg {animation: bounce $time-short ease-in-out $time-short 2}
+    }
+}
+
+// Animations
+//CSS3 Bounce Animation
+@keyframes bounce {
+    0%,  
+    50% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+  }
+  @keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-5px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}

@@ -1,0 +1,93 @@
+.singleProjectPage {
+    .projectHeroSection {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 5% 5%;
+        height: auto;
+        width: 100%;
+        // min-height: calc(100vh - 60px);
+        padding: 100px 50px;
+        .projectInfo {
+            // padding: 0 0px;
+            max-width: 900px;
+            margin: auto;
+            text-align: right;
+            
+            h2, span, p {
+                color: $white;
+            }
+            h2 {
+                font-size: 4rem;
+                // font-weight: 300;
+                margin-bottom: 1.7rem;
+            }
+            span {
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 1.5rem;
+                // font-weight: 500;
+                line-height: 2rem;
+                text-align: left;
+            }
+            br {
+                margin-bottom: 1.7rem;
+            }
+            > div * {
+                display: none;
+            }
+            > div p:first-child {
+                display:inherit;
+            }
+
+        }
+    }
+    .moreDescription {
+        padding: 75px 10%;
+        > div p:first-child {
+            display: none;
+        }
+        p {
+            font-size: 1.35rem;
+            // font-weight: 500;
+            line-height: 1.7rem;
+        }
+        br {
+            margin-bottom: 1.7rem;
+        }
+    }
+    .additionalInfo {
+        padding: 100px 10%;
+        background-position: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        svg {
+            margin-bottom: 10px;
+        }
+        h3 {
+            border-bottom: 1px solid $white;
+            margin-bottom: 15px;
+        }
+        ul {
+            margin-bottom: 40px;
+        }
+        button.button-white {
+            margin-bottom: 20px;
+        }
+        svg, h3, ul, button {
+            color: white;
+        }
+    }
+    @media screen and (max-width: 768px){
+        .projectHeroSection {
+            height: auto;
+            min-height: calc(100vh - 60px);
+            padding-top: 125px;
+            p {
+                text-align: center;
+            }
+        }
+    }
+}

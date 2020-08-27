@@ -1,0 +1,68 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the communication bar.
+// -----------------------------------------------------------------------------
+
+#appCommPanel {
+  overflow:hidden;
+  position: sticky;
+  top: 60px;
+  bottom: 0;
+  height: calc(100vh - 60px);
+  background-image: url(/images/HughLobelProfile10-2018-A.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-position: 50%;
+  border-right: 5px solid white;
+  padding: 0 5%;
+  animation: bgMove 20s infinite;
+  * {color: $black; }
+  #commDynamic{
+    position: absolute;
+    bottom: 30px;
+    // border-radius: 10px;
+    border-radius: 10%;
+    overflow-y: auto;
+    background-color: rgba(255,255,255,0.35);
+    padding: 10% 5%;
+    transition: all ease-in-out $time-medium;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: calc(100% - 60px);
+    &:hover {
+      opacity: 1;
+    }
+    h1, h2, h3, h4, h5, h6, p {
+      margin-bottom: 15px;
+    }
+    h2 {font-size: 2.7rem;}
+    h3 {font-size: 1.7rem; margin-bottom: 25px;}
+    p {font-size: 1.5rem;}
+    > span {font-size: 1.2rem; margin-bottom: 15px;}
+    & > :last-child {margin-bottom: 0;}
+  }
+}
+//Adjustments for different main classes w/ comm panel
+#main {
+  &.welcome {
+    #commDynamic {
+      height: 30%;
+    }
+  }
+  &.wideComm {
+    grid-template-columns: 40% auto;
+    @media screen and (min-width: $break-large) {grid-template-columns: 40% auto;}
+  }
+  &.border1 { #commDynamic { border-radius:53% 47% 24% 76% / 36% 47% 53% 64%; } }
+  &.border2 { #commDynamic { border-radius:28% 72% 27% 73% / 80% 20% 80% 20%; } }
+  &.border3 { #commDynamic { border-radius:60px 45px 30px 15px/15px 30px 45px 60px; } }
+}
+// Animations
+@keyframes bgMove {
+  0% { background-position: 47% 0%; }
+  50% { background-position: 53% 100%; }
+  100% { background-position: 47% 0%; }
+}

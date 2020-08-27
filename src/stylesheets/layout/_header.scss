@@ -1,0 +1,217 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts/_variables.scss";
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+	color: royalblue;
+}
+
+a:visited {
+	color: purple;
+}
+
+a:hover, a:focus, a:active {
+	color: midnightblue;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover, a:active {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+
+@media screen and (min-width: $break-small) {
+	.navbar-expand-md .navbar-nav {
+		width: auto;
+		display: flex;
+		flex-direction: row;
+	}
+	.navbar-expand-md .navbar-collapse {
+		display: block!important;
+		.navbar-nav {
+			float: right;
+		}
+	}
+
+}
+.appNavBar {
+	background-color: $white;
+	box-shadow: 0 2px 2px 0px rgba(94, 50, 50, 0.25);
+	.navbar-brand {
+		font-family: $title-font-stack;
+		font-size: 25px;
+		color: $white !important;
+		background-color: $black;
+		clip-path: polygon(0% 0%, 100% 0%, 93% 100%, 0% 100%);
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 60px;
+		padding: .5rem 5rem;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		font-weight: 700;
+		transition: all .25s ease-in-out;
+		&:hover {
+			padding-right: 6rem;
+		}
+		a {
+			display: flex;
+			span {
+				font-size: 1.1rem;
+				margin-top:7px;
+				margin-left:5px;
+				font-weight:500;
+			}
+		}
+		a:visited {color: $white;}
+	}
+}
+.main-navigation {
+	clear: both;
+	// display: block;
+	position: fixed;
+  top: 0;
+	width: 100%;
+	z-index: 9999;
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		.nav-item .nav-link {
+			color: $black;
+		}
+		li {
+			position: relative;
+			margin-left: 20px;
+		}
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+			a {
+				width: 200px;
+			}
+			ul {
+				left: -999em;
+				top: 0;
+			}
+		}
+	}
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+/*------- Custom Styles ---------------*/
+.screen-reader-text {
+    display: none;
+}
+header#masthead {
+	background-color: $white;
+	@media screen and (max-width: $break-small) {
+		padding-bottom: 10px;
+	}
+	.header-container {
+		display: flex;
+		width: 80%;
+		max-width: 1200px;
+		margin: auto;
+		.site-branding {
+			width: 50%;
+			.site-title {
+				margin: 0;
+				padding-top: 14px;
+				font-size: 24px;
+				@include thin-title;
+				a {
+					color: $black;
+				}
+			}
+			.site-description {
+				@include thin-title;
+				margin-top: 0;
+				font-size: 15px;
+				a {
+					color: $black;
+				}
+			}
+		}
+		#site-navigation {
+			width: 50%;
+			padding-top: $menu-padding;
+			padding-bottom: $menu-padding;
+			#primary-menu {
+				float: right;
+				.menu-item {
+					@include thin-title;
+					a {
+						color: $black;
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+}

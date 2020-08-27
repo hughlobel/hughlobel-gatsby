@@ -1,0 +1,12 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the hero component.
+// -----------------------------------------------------------------------------
+
+.heroSection {
+  padding: 50px 5%;
+  h1 {
+    color: $black;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

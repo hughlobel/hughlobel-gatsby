@@ -1,0 +1,119 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+/// Mixin to prefix several properties at once
+/// @author Hugo Giraudel
+/// @param {Map} $declarations - Declarations to prefix
+/// @param {List} $prefixes (()) - List of prefixes to print
+@mixin prefix($declarations, $prefixes: ()) {
+  @each $property, $value in $declarations {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+
+    // Output standard non-prefixed declaration
+    #{$property}: $value;
+  }
+}
+
+
+/// Hughs defined mixins
+@mixin page-width {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+@mixin thin-title {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+@mixin moving-bg {
+  background-size: cover;
+  background-position: 50%;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin center-content {
+  display: grid;
+  align-content: center;
+  align-items: center;
+}
+
+@keyframes floating {
+  0% {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  
+  50% {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  100% {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+}
+@mixin button {
+  display:block;
+  padding: 10px;
+  max-width: 300px;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: background-color $time-short ease-in-out, color $time-short ease-in-out;
+}
+@mixin white-button {
+  @include button;
+  border: 1px solid $white;
+  background-color: $black;
+  color: $white;
+}
+@mixin white-button-hover {
+  background-color: $white;
+  color: $black; 
+}
+@mixin black-button {
+  @include button;
+  border: 1px solid $black;
+  background-color: $white;
+  color: $black;
+}
+@mixin black-button-hover {
+  background-color: $black;
+  color: $white; 
+}

@@ -1,0 +1,30 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal 125% / 1.4 $text-font-stack;
+}
+h1,h2,h3,h4,h5,h6, p, form, input, label {
+  margin: 0;
+  font-family: $text-font-stack;
+  font-weight: 500;
+}
+p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: $text-font-stack;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: none;
+}
+button, form textarea {
+  font-family: $text-font-stack;
+  font-weight: 500;
+}
+form label {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
