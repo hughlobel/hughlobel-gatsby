@@ -13,12 +13,20 @@ export const CVPageTemplate = ({
   title, 
   content, 
   contentComponent,
-   devWork,
-   experience,
-   teaching,
-   openSource,
-   presentations,
-   education
+  education,
+  teaching,
+  guestLecture,
+  communityEngagement,
+  projects,
+  devWork,
+  leadership,
+  interests,
+  experience,
+  awards,
+  works,
+  performances,
+  presentations,
+  musician
 }) => {
   const PageContent = contentComponent || Content
 
@@ -121,7 +129,7 @@ export const CVPageTemplate = ({
                 <br />
                 <h3><strong><u>Open Source and Research Development</u></strong></h3>
                 <br />
-                {openSource.map((proj) => 
+                {projects.map((proj) => 
                   <Fade bottom>
                     <p><strong>{proj.date}</strong></p>
                     <p>{proj.name}</p>
@@ -171,12 +179,20 @@ CVPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
-  devWork: PropTypes.array,
-  experience: PropTypes.array,
-  teaching: PropTypes.array,
-  openSource: PropTypes.array,
-  presentations: PropTypes.array,
   education: PropTypes.array,
+  teaching: PropTypes.array,
+  guestLecture: PropTypes.array,
+  communityEngagement: PropTypes.array,
+  projects: PropTypes.array,
+  devWork: PropTypes.array,
+  leadership: PropTypes.array,
+  interests: PropTypes.array,
+  experience: PropTypes.array,
+  awards: PropTypes.array,
+  works: PropTypes.array,
+  performances: PropTypes.array,
+  presentations: PropTypes.array,
+  musician: PropTypes.array,
 }
 
 const CVPage = ({ data }) => {
@@ -187,12 +203,20 @@ const CVPage = ({ data }) => {
       <CVPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
-        devWork={post.frontmatter.devWork}
-        experience={post.frontmatter.experience}
-        teaching={post.frontmatter.teaching}
-        openSource={post.frontmatter.openSource}
-        presentations={post.frontmatter.presentations}
         education={post.frontmatter.education}
+        teaching={post.frontmatter.teaching}
+        guestLecture={post.frontmatter.guestLecture}
+        communityEngagement={post.frontmatter.communityEngagement}
+        projects={post.frontmatter.projects}
+        devWork={post.frontmatter.devWork}
+        leadership={post.frontmatter.leadership}
+        interests={post.frontmatter.interests}
+        experience={post.frontmatter.experience}
+        awards={post.frontmatter.awards}
+        works={post.frontmatter.works}
+        performances={post.frontmatter.performances}
+        presentations={post.frontmatter.presentations}
+        musician={post.frontmatter.musician}
         content={post.html}
       />
     </Layout>
@@ -209,21 +233,29 @@ CVPage.propTypes = {
 
 export default CVPage
 
+// export const CVPageQuery = graphql`
+//   query CVPage($id: String!) {
+//     markdownRemark(id: { eq: $id }) {
+//       html
+//       frontmatter {
+//         title
+//       }
+//     }
+//   }
+// `
+
 export const CVPageQuery = graphql`
   query CVPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         title
-        devWork {
-          date
-          company
-          description
-          location
-        }
-        experience {
-          title
-          elements
+        education {
+          uni
+          deg
+          year
+          instructors
+          other
         }
         teaching {
           section {
@@ -235,19 +267,71 @@ export const CVPageQuery = graphql`
             }
           }
         }
-        openSource {
+        guestLecture {
+          location
+          courseList {
+            num
+            name
+          }
+        }
+        communityEngagement {
+          location 
+          engagements {
+            title
+            description
+            date
+          }
+        }
+        projects {
           date
           name
           description
         }
+        devWork {
+          date
+          company
+          description
+          location
+        }
+        leadership {
+          title
+          description
+        }
+        interests
+        experience {
+          title
+          elements
+        }
+        awards {
+          year
+          awards {
+            type
+            title
+            description
+          }
+        }
+        works {
+          year
+          list {
+            title
+            description
+          }
+        }
+        performances {
+          date
+          ensemble
+          title
+          location
+        }
         presentations {
           event
         }
-        education {
-          school
-          degree
-          date
-          other
+        musician {
+          year
+          events {
+            instrument
+            description
+          }
         }
       }
     }

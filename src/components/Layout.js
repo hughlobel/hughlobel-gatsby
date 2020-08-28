@@ -2,6 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
 import AppNavbar from '../components/Navbar'
+import ContactModal from '../components/ContactModal'
 // import './all.sass'
 import '../stylesheets/main.scss'
 import useSiteMetadata from './SiteMetadata'
@@ -50,6 +51,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <AppNavbar />
+      <ContactModal />
       <section id="main">
         <section class=""></section>
         <section class="pageContent">{children}</section>

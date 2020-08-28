@@ -95,7 +95,7 @@ export const IndexPageTemplate = ({
           <p className='bioContent'>{bioSection}</p>
           <div className="actionCall threeColumns">
             <Link to="/about"><Fade><div><button className="button-transparent"><span>Read Full Bio</span></button></div></Fade></Link>
-            <Link to="/developer-resume"><Fade><div><button className="button-transparent"><span>View Developer Resume</span></button></div></Fade></Link>
+            <Link to="/resume"><Fade><div><button className="button-transparent"><span>View Developer Resume</span></button></div></Fade></Link>
             <Link to="/artist-cv"><Fade><div><button className="button-transparent"><span>View Artist CV</span></button></div></Fade></Link>
           </div>
         </Fade>
