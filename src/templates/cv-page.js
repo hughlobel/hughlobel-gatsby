@@ -38,18 +38,6 @@ export const CVPageTemplate = ({
         </Fade>
       </section>
       <VideoBG></VideoBG>
-      <section className="formSection">
-        <Fade>
-          <div className="bodyCopy">
-          <PageContent className="content" content={content} />
-          </div>
-        </Fade>
-      </section>
-      <section className="heroSection simpleHero" >
-        <Fade>
-          <h1>{title}</h1>
-        </Fade>
-      </section>
       <section className="">
         <div className="bodyCopy">
           <div>
@@ -65,19 +53,130 @@ export const CVPageTemplate = ({
                 <br />
               </div>
             </div>
+            <div class="resumeEducation">
+              <div className="container">
+                <br />
+                <h3><strong><u>Education</u></strong></h3>
+                <br />
+                {education.map((degree) => 
+                  <Fade bottom>
+                    <p><i>{degree.uni}</i></p>
+                    <p><strong>{degree.deg}.&nbsp;</strong>{degree.year}.</p>
+                    <p>{degree.instructors}.</p>
+                    <p>{degree.other}</p>
+                    <br />
+                  </Fade>
+                )}
+              </div>
+            </div>
+            <div class="resumeTeaching">
+              <div className="container">
+                <br />
+                <h3><strong><u>University Teaching</u></strong></h3>
+                <br />
+                {teaching.map((uni) => 
+                  <Fade bottom>
+                    <p><strong>{uni.location}</strong></p>
+                    <br />
+                    {uni.section.map((dept) => 
+                      <div>
+                        <Fade bottom>
+                          <p><i>{dept.name}</i></p>
+                          {dept.courseList.map((cl) => 
+                            <p><strong>{cl.num}: </strong>{cl.name}. {cl.date}</p>
+                          )}
+                          <br />
+                        </Fade>
+                      </div>
+                    )}
+                    <br />
+                  </Fade>
+                )}
+              </div>
+            </div>
+            <div class="resumeGuestTeaching">
+              <div className="container">
+                <br />
+                <h3><strong><u>Guest Teaching</u></strong></h3>
+                <br />
+                {guestLecture.map((uni) => 
+                  <Fade bottom>
+                    <p><strong>{uni.location}</strong></p>
+                    {uni.courseList.map((info) => 
+                      <Fade bottom>
+                        <p><i>{info.num}</i> - {info.name}</p>
+                      </Fade>
+                    )}
+                    <br />
+                  </Fade>
+                )}
+              </div>
+            </div>
+            <div class="resumeCommunityEngagement">
+              <div className="container">
+                <br />
+                <h3><strong><u>Community Engagement</u></strong></h3>
+                <br />
+                {communityEngagement.map((item) => 
+                  <Fade bottom>
+                    <p><strong>{item.location}</strong></p>
+                    {item.engagements.map((info) => 
+                      <Fade bottom>
+                        <p><i>{info.title}</i> - {info.description}</p>
+                      </Fade>
+                    )}
+                    <br />
+                  </Fade>
+                )}
+              </div>
+            </div>
+            <div class="resumeProjects">
+              <div className="container">
+                <br />
+                <h3><strong><u>Art Technology and Interdisciplinary Media Collaboration</u></strong></h3>
+                <br />
+                {projects.map((cat) => 
+                  <Fade bottom>
+                    <p><strong>{cat.date}</strong></p>
+                    <p><i>{cat.name}.&nbsp;</i>{cat.description}</p>
+                    <br />
+                  </Fade>
+                )}
+              </div>
+            </div>
             <div class="resumeDevWork">
               <div className="container">
                 <br />
-                <h3><strong><u>Development Work</u></strong></h3>
+                <h3><strong><u>Commercial Web and Software Development</u></strong></h3>
                 <br />
                 {devWork.map((job) => 
                   <Fade bottom>
                     <p><strong>{job.date}</strong></p>
-                    <p>{job.company}</p>
-                    <p>{job.description}</p>
-                    <p>{job.location}</p>
+                    <p><i>{job.company}.&nbsp;</i>{job.description}&nbsp;{job.location}.</p>
                     <br />
                   </Fade>
+                )}
+              </div>
+            </div>
+            <div class="resumeLeadership">
+              <div className="container">
+                <br />
+                <h3><strong><u>Art and Education Leadership and Administration</u></strong></h3>
+                <br />
+                {leadership.map((cat) => 
+                  <Fade bottom>
+                    <p><strong>{cat.title}</strong>. {cat.description}.</p>
+                  </Fade>
+                )}
+              </div>
+            </div>
+            <div class="resumeInterest">
+              <div className="container">
+                <br />
+                <h3><strong><u>Areas of Interest</u></strong></h3>
+                <br />
+                {interests.map((cat, i, arr) => 
+                    <p class='inlineList'>{cat}{arr.length - 1 > i && ','}{arr.length - 1 === i && '.'}&nbsp;</p>
                 )}
               </div>
             </div>
@@ -90,8 +189,8 @@ export const CVPageTemplate = ({
                   <Fade bottom>
                     <p><strong>{cat.title}</strong></p>
                     <div>
-                      {cat.elements.map((item) =>
-                        <p class='inlineList'>{item},&nbsp;</p>
+                      {cat.elements.map((item, i, arr) =>
+                          <p class='inlineList'>{item}{arr.length - 1 > i && ','}{arr.length - 1 === i && '.'}&nbsp;</p>
                       )}
                     </div>
                     <br />
@@ -99,45 +198,56 @@ export const CVPageTemplate = ({
                 )}
               </div>
             </div>
-            <div class="resumeTeaching">
+            <div class="resumeAwards">
               <div className="container">
                 <br />
-                <h3><strong><u>Selected University Teaching in Web and Multimedia Software Development</u></strong></h3>
+                <h3><strong><u>Selected Awards and Commissions</u></strong></h3>
                 <br />
-                {teaching.map((uni) => 
+                {awards.map((year) => 
                   <Fade bottom>
-                    <p><strong>{uni.location}</strong></p>
-                    <br />
-                    {uni.section.map((dept) => 
-                      <div>
+                    <p><strong>{year.year}</strong></p>
+                    <div>
+                      {year.awards.map((item) =>
                         <div>
-                          <p><i>{dept.name}</i></p>
-                          {dept.courseList.map((cl) => 
-                            <p><strong>{cl.num}: </strong>{cl.name}. {cl.date}</p>
-                          )}
-                          <br />
+                          <p><strong>{item.type} -&nbsp;</strong>{item.title}.&nbsp;{item.description && item.description+'.'}</p>
                         </div>
-                      </div>
-                    )}
+                      )}
+                    </div>
                     <br />
                   </Fade>
                 )}
               </div>
             </div>
-            <div class="resumeResearch">
+            <div class="resumeWorks">
               <div className="container">
                 <br />
-                <h3><strong><u>Open Source and Research Development</u></strong></h3>
+                <h3><strong><u>Selected Sonic and Multimedia Works</u></strong></h3>
                 <br />
-                {projects.map((proj) => 
+                {works.map((year) => 
                   <Fade bottom>
-                    <p><strong>{proj.date}</strong></p>
-                    <p>{proj.name}</p>
-                    <p>{proj.description}</p>
+                    <p><strong>{year.year}</strong></p>
+                    <div>
+                      {year.list.map((item) =>
+                        <p><strong>{item.title} -&nbsp;</strong>{item.description+'.'}</p>
+                      )}
+                    </div>
                     <br />
                   </Fade>
                 )}
               </div>
+            </div>
+            <div class="resumePerformances">
+              <div className="container">
+                <br />
+                <h3><strong><u>Selected Premieres</u></strong></h3>
+                <br />
+                {performances.map((event) => 
+                  <Fade bottom>
+                    <p><strong>{event.date} -&nbsp;</strong><i>{event.ensemble}.&nbsp;</i>{event.title}.&nbsp;{event.location}.</p>
+                  </Fade>
+                )}
+              </div>
+              <br />
             </div>
             <div class="resumePresentations">
               <div className="container">
@@ -152,17 +262,17 @@ export const CVPageTemplate = ({
                 )}
               </div>
             </div>
-            <div class="resumeEducation">
+            <div class="resumeMusician">
               <div className="container">
                 <br />
-                <h3><strong><u>Education</u></strong></h3>
+                <h3><strong><u>Selected Performing Experience</u></strong></h3>
                 <br />
-                {education.map((degree) => 
+                {musician.map((year) => 
                   <Fade bottom>
-                    <p><i>{degree.school}</i></p>
-                    <p>{degree.degree}</p>
-                    <p>{degree.date}</p>
-                    <p>{degree.other}</p>
+                    <p><strong>{year.year}</strong></p>
+                    {year.events.map((item) =>
+                        <p><strong>{item.instrument} -</strong> {item.description}.</p>
+                    )}
                     <br />
                   </Fade>
                 )}

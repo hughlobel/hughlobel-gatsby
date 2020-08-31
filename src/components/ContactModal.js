@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRocket, faTimes } from '@fortawesome/free-solid-svg-icons'
 
@@ -54,9 +54,9 @@ export default class Modal extends React.Component {
       }
       if (!event.target.matches('.openModal span') && !event.target.matches('.openModal') && !event.target.matches('#contactModal.closed *')) return;
       event.preventDefault();
-      var element = document.getElementById("contactModal");
-      element.classList.remove("closed");
-      element.classList.add("open");
+      var elem = document.getElementById("contactModal");
+      elem.classList.remove("closed");
+      elem.classList.add("open");
     
     }, false);
   }
