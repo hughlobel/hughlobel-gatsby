@@ -5,6 +5,10 @@ import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import Fade from 'react-reveal/Fade';
+import Media from 'react-media';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRocket, faTools, faCodeBranch, faArrowAltCircleRight, faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons'
 
 export const ProjectsPostTemplate = ({
   content,
@@ -13,36 +17,114 @@ export const ProjectsPostTemplate = ({
   tags,
   title,
   helmet,
+  imageUrl,
+  imageAlt,
+  category,
+  concepts,
+  tools,
+  more,
+  relatedLinks
 }) => {
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <div className="singleProjectPage">
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
+      <div>
+        <Media queries={{ small: { maxWidth: 980 } }}>
+          {matches =>
+            matches.small ? (
+              <div
+                className="projectHeroSection" 
+                style={{backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0.75) 33%, rgba(0,0,0,0.75) 55%),url("/img/${imageUrl}")`}}
+              >
+                <div className="perfectCenter projectInfo">
+                  <h2>{title}</h2>
+                  <span>{category}</span>
+                  <p>{description}</p>
+                </div>
+              </div>
+            ) : (
+              <div 
+                className="twoColumns twoColumns-3-7 heroSection projectHeroSection" 
+                style={{backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.9) 55%),url("/img/${imageUrl}")`}}
+              >
+                <div class="hideOnMobile"></div>
+                <Fade cascade>
+                  <div className="perfectCenter projectInfo">
+                    <h2>{title}</h2>
+                    <span>{category}</span>
+                    <p>{description}</p>
+                  </div>
+                </Fade>
+              </div>
+            )
+          }
+        </Media>
+        <section className="container projectContent">
+          <Fade bottom>
             <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
+          </Fade>
+        </section>
+        <section 
+          className="additionalInfo"
+          style={{backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0.85) 33%, rgba(0,0,0,0.85) 55%),url("/img/${imageAlt}")`}}
+        >
+          <div className="threeColumns">
+            <div className="horiCenter">
+              <Fade bottom>
+                <FontAwesomeIcon icon={faRocket} size="2x" />
+                <h3>Concepts</h3>
+                <ul>
+                  {concepts.map((concept) => (
+                    <Fade bottom><li>{concept}</li></Fade>
                   ))}
                 </ul>
-              </div>
-            ) : null}
+              </Fade>
+            </div>
+            <div className="horiCenter">
+              <Fade bottom>
+                <FontAwesomeIcon icon={faTools} size="2x" />
+                <h3>Tools</h3>
+                <ul>
+                  {tools.map((tools) => (
+                    <Fade bottom><li>{tools}</li></Fade>
+                  ))}
+                </ul>
+              </Fade>
+            </div>
+            <div className="horiCenter">
+              <Fade bottom>
+                <FontAwesomeIcon icon={faCodeBranch} size="2x" />
+                <h3>Related Projects</h3>
+                <ul className="">
+                  {relatedLinks.map((site) => (
+                    <Fade bottom><Link to={site.link}><button className="button-white button-transparent"><span>{site.text}</span></button></Link></Fade>
+                  ))}
+                </ul>
+              </Fade>
+            </div>
           </div>
-        </div>
+          <div className="oneColumn">
+            <div className="horiCenter">
+              <Fade bottom>
+                <FontAwesomeIcon icon={faArrowAltCircleRight} size="2x" />
+                <h3>Learn More</h3>
+                <ul className="perfectCenter">
+                  {more.map((site) => (
+                    <Fade bottom><a href={site.link} target="_blank" rel="noopener noreferrer"><button className="button-white button-transparent"><span>{site.text}</span></button></a></Fade>
+                  ))}
+                </ul>
+              </Fade>
+            </div>
+            <div className="horiCenter">
+              <FontAwesomeIcon icon={faArrowAltCircleLeft} size="2x" />
+              <Fade bottom><Link to='/projects'><button className="button-white button-transparent"><span>Back To Projects</span></button></Link></Fade>
+            </div> 
+          </div>
+        </section>
       </div>
-    </section>
+    </div>
   )
 }
 
@@ -50,6 +132,13 @@ ProjectsPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
+  imageUrl: PropTypes.string,
+  imageAlt: PropTypes.string,
+  concepts: PropTypes.array,
+  tools: PropTypes.array,
+  relatedLinks: PropTypes.array,
+  more: PropTypes.array,
+  category: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -63,6 +152,13 @@ const ProjectsPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        imageUrl={post.frontmatter.imageUrl}
+        imageAlt={post.frontmatter.imageAlt}
+        concepts={post.frontmatter.concepts}
+        tools={post.frontmatter.tools}
+        relatedLinks={post.frontmatter.relatedLinks}
+        more={post.frontmatter.more}
+        category={post.frontmatter.category}
         helmet={
           <Helmet titleTemplate="%s | Projects">
             <title>{`${post.frontmatter.title}`}</title>
@@ -97,6 +193,19 @@ export const pageQuery = graphql`
         title
         description
         tags
+        imageUrl
+        imageAlt
+        concepts
+        tools
+        relatedLinks {
+          link
+          text
+        }
+        more {
+          link
+          text
+        }
+        category
       }
     }
   }

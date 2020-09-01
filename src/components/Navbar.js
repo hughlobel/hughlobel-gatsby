@@ -10,6 +10,8 @@ import {
   NavLink,
   Container
 } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 import config from '../config/config'
 const AppNavbar = class extends React.Component {
@@ -20,26 +22,6 @@ const AppNavbar = class extends React.Component {
       navBarActiveClass: '',
       isOpen: false 
     }
-  }
-
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
-      }
-    )
   }
 
   toggle = () => {
@@ -55,6 +37,7 @@ const AppNavbar = class extends React.Component {
       <Container fluid >
     <NavbarBrand><Link to="/">{config.siteTitle} | <span>{config.siteSubtitle}</span></Link></NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
+        <FontAwesomeIcon icon={faBars} className="menuBars" />
         <Collapse isOpen={this.state.isOpen} navbar >
           <Nav className="" navbar >
             <NavItem>
