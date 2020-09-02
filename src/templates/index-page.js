@@ -38,16 +38,12 @@ export const IndexPageTemplate = ({
     <section class="titleSection">
       <p class="videoInfo"><Fade top>This, and all videos on this site, are captured in MSDP: a multimedia platform created by Hugh Lobel</Fade></p>
       <div className='container titleContent'>
-        <Fade>
-          <div>
-            <h2>Hugh Lobel is a Full-Stack Web / Music Software Developer and Educator, Building and Sharing Creative Experiences for a Connected World.</h2>
-          </div>
-        </Fade>
-        <Fade>
-          <div className="titleImage">
-            <img src='img/hugh_talking.jpg' alt="Hugh Lobel speaking in the Atlas Building at CU Boulder"/>
-          </div>
-        </Fade>
+        <div>
+          <h2>Hugh Lobel is a Full-Stack Web / Music Software Developer and Educator, Building and Sharing Creative Experiences for a Connected World.</h2>
+        </div>
+        <div className="titleImage">
+          <img src='img/hugh_talking.jpg' alt="Hugh Lobel speaking in the Atlas Building at CU Boulder"/>
+        </div>
       </div>
     </section>
     <section className="fullScreen homeScreen">
