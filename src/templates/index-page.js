@@ -49,7 +49,7 @@ export const IndexPageTemplate = ({
                 <p className="white">{fp1.excerpt}</p>
             </Link>
           </a>
-          <a className="featuredTwo" style={ sectionStyle2 }>
+          <a className="featuredFrontTwo" style={ sectionStyle2 }>
             <Link to={`/projects/${fp2.title}`} className="perfectCenter">
               <h3>{fp2.title}</h3><br /> 
               <p className="category">{fp2.category}</p><br />
