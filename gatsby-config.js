@@ -29,6 +29,7 @@ module.exports = {
         name: 'images',
       },
     },
+    `gatsby-plugin-scroll-reveal`,
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -63,12 +64,6 @@ module.exports = {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-styled-components`,
-      options: {
-        // Add any options here
       },
     },
     {

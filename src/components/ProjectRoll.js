@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import Fade from 'react-reveal/Fade';
 import Media from 'react-media';
 
 class ProjectRoll extends React.Component {
@@ -13,7 +12,7 @@ class ProjectRoll extends React.Component {
       <section className="projectsList">
         {posts &&
           posts.map(({ node: post }, index) => (
-            <Fade>
+            <div>
               <div className="fullWidth singleProject">
                 {index%2 === 0 && 
                   <Media queries={{ small: { maxWidth: 768 } }}>
@@ -70,7 +69,7 @@ class ProjectRoll extends React.Component {
                 </Media>
                 }
               </div>
-            </Fade>
+            </div>
           ))}
       </section>
     )

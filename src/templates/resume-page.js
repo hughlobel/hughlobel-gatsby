@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Fade from 'react-reveal/Fade';
 
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
@@ -25,9 +24,7 @@ export const ResumePageTemplate = ({
   return (
     <div class="resumePage innerPage">
       <section className="heroSection" >
-        <Fade>
-          <h2>{title}</h2>
-        </Fade>
+        <h2>{title}</h2>
       </section>
       <VideoBG></VideoBG>
       <section className="">
@@ -37,11 +34,9 @@ export const ResumePageTemplate = ({
               <div className="container">
                 <h2><strong>H U G H&nbsp;&nbsp; L O B E L</strong></h2>
                 <br />
-                <Fade bottom>
-                  {config.contact.map((line) => 
-                    <p>{line}</p>
-                  )}
-                </Fade>
+                {config.contact.map((line) => 
+                  <p>{line}</p>
+                )}
                 <br />
               </div>
             </div>
@@ -51,13 +46,13 @@ export const ResumePageTemplate = ({
                 <h3><strong><u>Development Work</u></strong></h3>
                 <br />
                 {devWork.map((job) => 
-                  <Fade bottom>
+                  <div>
                     <p><strong>{job.date}</strong></p>
                     <p>{job.company}</p>
                     <p>{job.description}</p>
                     <p>{job.location}</p>
                     <br />
-                  </Fade>
+                  </div>
                 )}
               </div>
             </div>
@@ -67,7 +62,7 @@ export const ResumePageTemplate = ({
                 <h3><strong><u>Experience</u></strong></h3>
                 <br />
                 {experience.map((cat) => 
-                  <Fade bottom>
+                  <div>
                     <p><strong>{cat.title}</strong></p>
                     <div>
                       {cat.elements.map((item) =>
@@ -75,7 +70,7 @@ export const ResumePageTemplate = ({
                       )}
                     </div>
                     <br />
-                  </Fade>
+                  </div>
                 )}
               </div>
             </div>
@@ -85,7 +80,7 @@ export const ResumePageTemplate = ({
                 <h3><strong><u>Selected University Teaching in Web and Multimedia Software Development</u></strong></h3>
                 <br />
                 {teaching.map((uni) => 
-                  <Fade bottom>
+                  <div>
                     <p><strong>{uni.location}</strong></p>
                     <br />
                     {uni.section.map((dept) => 
@@ -100,7 +95,7 @@ export const ResumePageTemplate = ({
                       </div>
                     )}
                     <br />
-                  </Fade>
+                  </div>
                 )}
               </div>
             </div>
@@ -110,12 +105,12 @@ export const ResumePageTemplate = ({
                 <h3><strong><u>Open Source and Research Development</u></strong></h3>
                 <br />
                 {openSource.map((proj) => 
-                  <Fade bottom>
+                  <div>
                     <p><strong>{proj.date}</strong></p>
                     <p>{proj.name}</p>
                     <p>{proj.description}</p>
                     <br />
-                  </Fade>
+                  </div>
                 )}
               </div>
             </div>
@@ -125,10 +120,10 @@ export const ResumePageTemplate = ({
                 <h3><strong><u>Selected Workshops and Presentations</u></strong></h3>
                 <br />
                 {presentations.map((event) => 
-                  <Fade bottom>
+                  <div>
                     <p>{event.event}</p>
                     <br />
-                  </Fade>
+                  </div>
                 )}
               </div>
             </div>
@@ -138,13 +133,13 @@ export const ResumePageTemplate = ({
                 <h3><strong><u>Education</u></strong></h3>
                 <br />
                 {education.map((degree) => 
-                  <Fade bottom>
+                  <div>
                     <p><i>{degree.school}</i></p>
                     <p>{degree.degree}</p>
                     <p>{degree.date}</p>
                     <p>{degree.other}</p>
                     <br />
-                  </Fade>
+                  </div>
                 )}
               </div>
             </div>

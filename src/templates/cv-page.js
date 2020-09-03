@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Fade from 'react-reveal/Fade';
 
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
@@ -33,9 +32,7 @@ export const CVPageTemplate = ({
   return (
     <div class="resumePage innerPage">
       <section className="heroSection" >
-        <Fade>
-          <h2>{title}</h2>
-        </Fade>
+        <h2>{title}</h2>
       </section>
       <VideoBG></VideoBG>
       <section className="">
@@ -45,11 +42,9 @@ export const CVPageTemplate = ({
               <div className="container">
                 <h2><strong>H U G H&nbsp;&nbsp; L O B E L</strong></h2>
                 <br />
-                <Fade bottom>
-                  {config.contact.map((line) => 
-                    <p>{line}</p>
-                  )}
-                </Fade>
+                {config.contact.map((line) => 
+                  <p>{line}</p>
+                )}
                 <br />
               </div>
             </div>
@@ -59,13 +54,13 @@ export const CVPageTemplate = ({
                 <h3><strong><u>Education</u></strong></h3>
                 <br />
                 {education.map((degree) => 
-                  <Fade bottom>
+                  <div>
                     <p><i>{degree.uni}</i></p>
                     <p><strong>{degree.deg}.&nbsp;</strong>{degree.year}.</p>
                     <p>{degree.instructors}.</p>
                     <p>{degree.other}</p>
                     <br />
-                  </Fade>
+                  </div>
                 )}
               </div>
             </div>
@@ -75,22 +70,20 @@ export const CVPageTemplate = ({
                 <h3><strong><u>University Teaching</u></strong></h3>
                 <br />
                 {teaching.map((uni) => 
-                  <Fade bottom>
+                  <div>
                     <p><strong>{uni.location}</strong></p>
                     <br />
                     {uni.section.map((dept) => 
                       <div>
-                        <Fade bottom>
-                          <p><i>{dept.name}</i></p>
-                          {dept.courseList.map((cl) => 
-                            <p><strong>{cl.num}: </strong>{cl.name}. {cl.date}</p>
-                          )}
-                          <br />
-                        </Fade>
+                        <p><i>{dept.name}</i></p>
+                        {dept.courseList.map((cl) => 
+                          <p><strong>{cl.num}: </strong>{cl.name}. {cl.date}</p>
+                        )}
+                        <br />
                       </div>
                     )}
                     <br />
-                  </Fade>
+                  </div>
                 )}
               </div>
             </div>
@@ -100,15 +93,13 @@ export const CVPageTemplate = ({
                 <h3><strong><u>Guest Teaching</u></strong></h3>
                 <br />
                 {guestLecture.map((uni) => 
-                  <Fade bottom>
+                  <div>
                     <p><strong>{uni.location}</strong></p>
                     {uni.courseList.map((info) => 
-                      <Fade bottom>
-                        <p><i>{info.num}</i> - {info.name}</p>
-                      </Fade>
+                      <p><i>{info.num}</i> - {info.name}</p>
                     )}
                     <br />
-                  </Fade>
+                  </div>
                 )}
               </div>
             </div>
@@ -118,15 +109,13 @@ export const CVPageTemplate = ({
                 <h3><strong><u>Community Engagement</u></strong></h3>
                 <br />
                 {communityEngagement.map((item) => 
-                  <Fade bottom>
+                  <div>
                     <p><strong>{item.location}</strong></p>
                     {item.engagements.map((info) => 
-                      <Fade bottom>
-                        <p><i>{info.title}</i> - {info.description}</p>
-                      </Fade>
+                      <p><i>{info.title}</i> - {info.description}</p>
                     )}
                     <br />
-                  </Fade>
+                  </div>
                 )}
               </div>
             </div>
@@ -136,11 +125,11 @@ export const CVPageTemplate = ({
                 <h3><strong><u>Art Technology and Interdisciplinary Media Collaboration</u></strong></h3>
                 <br />
                 {projects.map((cat) => 
-                  <Fade bottom>
+                  <div>
                     <p><strong>{cat.date}</strong></p>
                     <p><i>{cat.name}.&nbsp;</i>{cat.description}</p>
                     <br />
-                  </Fade>
+                  </div>
                 )}
               </div>
             </div>
@@ -150,11 +139,11 @@ export const CVPageTemplate = ({
                 <h3><strong><u>Commercial Web and Software Development</u></strong></h3>
                 <br />
                 {devWork.map((job) => 
-                  <Fade bottom>
+                  <div>
                     <p><strong>{job.date}</strong></p>
                     <p><i>{job.company}.&nbsp;</i>{job.description}&nbsp;{job.location}.</p>
                     <br />
-                  </Fade>
+                  </div>
                 )}
               </div>
             </div>
@@ -164,9 +153,9 @@ export const CVPageTemplate = ({
                 <h3><strong><u>Art and Education Leadership and Administration</u></strong></h3>
                 <br />
                 {leadership.map((cat) => 
-                  <Fade bottom>
+                  <div>
                     <p><strong>{cat.title}</strong>. {cat.description}.</p>
-                  </Fade>
+                  </div>
                 )}
               </div>
             </div>
@@ -186,7 +175,7 @@ export const CVPageTemplate = ({
                 <h3><strong><u>Experience</u></strong></h3>
                 <br />
                 {experience.map((cat) => 
-                  <Fade bottom>
+                  <div>
                     <p><strong>{cat.title}</strong></p>
                     <div>
                       {cat.elements.map((item, i, arr) =>
@@ -194,7 +183,7 @@ export const CVPageTemplate = ({
                       )}
                     </div>
                     <br />
-                  </Fade>
+                  </div>
                 )}
               </div>
             </div>
@@ -204,7 +193,7 @@ export const CVPageTemplate = ({
                 <h3><strong><u>Selected Awards and Commissions</u></strong></h3>
                 <br />
                 {awards.map((year) => 
-                  <Fade bottom>
+                  <div>
                     <p><strong>{year.year}</strong></p>
                     <div>
                       {year.awards.map((item) =>
@@ -214,7 +203,7 @@ export const CVPageTemplate = ({
                       )}
                     </div>
                     <br />
-                  </Fade>
+                  </div>
                 )}
               </div>
             </div>
@@ -224,7 +213,7 @@ export const CVPageTemplate = ({
                 <h3><strong><u>Selected Sonic and Multimedia Works</u></strong></h3>
                 <br />
                 {works.map((year) => 
-                  <Fade bottom>
+                  <div>
                     <p><strong>{year.year}</strong></p>
                     <div>
                       {year.list.map((item) =>
@@ -232,7 +221,7 @@ export const CVPageTemplate = ({
                       )}
                     </div>
                     <br />
-                  </Fade>
+                  </div>
                 )}
               </div>
             </div>
@@ -242,9 +231,9 @@ export const CVPageTemplate = ({
                 <h3><strong><u>Selected Premieres</u></strong></h3>
                 <br />
                 {performances.map((event) => 
-                  <Fade bottom>
+                  <div>
                     <p><strong>{event.date} -&nbsp;</strong><i>{event.ensemble}.&nbsp;</i>{event.title}.&nbsp;{event.location}.</p>
-                  </Fade>
+                  </div>
                 )}
               </div>
               <br />
@@ -255,10 +244,10 @@ export const CVPageTemplate = ({
                 <h3><strong><u>Selected Workshops and Presentations</u></strong></h3>
                 <br />
                 {presentations.map((event) => 
-                  <Fade bottom>
+                  <div>
                     <p>{event.event}</p>
                     <br />
-                  </Fade>
+                  </div>
                 )}
               </div>
             </div>
@@ -268,13 +257,13 @@ export const CVPageTemplate = ({
                 <h3><strong><u>Selected Performing Experience</u></strong></h3>
                 <br />
                 {musician.map((year) => 
-                  <Fade bottom>
+                  <div>
                     <p><strong>{year.year}</strong></p>
                     {year.events.map((item) =>
                         <p><strong>{item.instrument} -</strong> {item.description}.</p>
                     )}
                     <br />
-                  </Fade>
+                  </div>
                 )}
               </div>
             </div>

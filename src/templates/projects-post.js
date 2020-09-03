@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import Fade from 'react-reveal/Fade';
+
 import Media from 'react-media';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRocket, faTools, faCodeBranch, faArrowAltCircleRight, faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons'
@@ -50,21 +50,17 @@ export const ProjectsPostTemplate = ({
                 style={{backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.9) 55%),url("/img/${imageUrl}")`}}
               >
                 <div class="hideOnMobile"></div>
-                <Fade cascade>
                   <div className="perfectCenter projectInfo">
                     <h2>{title}</h2>
                     <span>{category}</span>
                     <p>{description}</p>
                   </div>
-                </Fade>
               </div>
             )
           }
         </Media>
         <section className="container projectContent">
-          <Fade bottom>
             <PostContent content={content} />
-          </Fade>
         </section>
         <section 
           className="additionalInfo"
@@ -72,54 +68,46 @@ export const ProjectsPostTemplate = ({
         >
           <div className="threeColumns">
             <div className="horiCenter">
-              <Fade bottom>
                 <FontAwesomeIcon icon={faRocket} size="2x" />
                 <h3>Concepts</h3>
                 <ul>
                   {concepts.map((concept) => (
-                    <Fade bottom><li>{concept}</li></Fade>
+                    <li>{concept}</li>
                   ))}
                 </ul>
-              </Fade>
             </div>
             <div className="horiCenter">
-              <Fade bottom>
                 <FontAwesomeIcon icon={faTools} size="2x" />
                 <h3>Tools</h3>
                 <ul>
                   {tools.map((tools) => (
-                    <Fade bottom><li>{tools}</li></Fade>
+                    <li>{tools}</li>
                   ))}
                 </ul>
-              </Fade>
             </div>
             <div className="horiCenter">
-              <Fade bottom>
                 <FontAwesomeIcon icon={faCodeBranch} size="2x" />
                 <h3>Related Projects</h3>
                 <ul className="">
                   {relatedLinks.map((site) => (
-                    <Fade bottom><Link to={site.link}><button className="button-white button-transparent"><span>{site.text}</span></button></Link></Fade>
+                    <Link to={site.link}><button className="button-white button-transparent"><span>{site.text}</span></button></Link>
                   ))}
                 </ul>
-              </Fade>
             </div>
           </div>
           <div className="oneColumn">
             <div className="horiCenter">
-              <Fade bottom>
                 <FontAwesomeIcon icon={faArrowAltCircleRight} size="2x" />
                 <h3>Learn More</h3>
                 <ul className="perfectCenter">
                   {more.map((site) => (
-                    <Fade bottom><a href={site.link} target="_blank" rel="noopener noreferrer"><button className="button-white button-transparent"><span>{site.text}</span></button></a></Fade>
+                    <a href={site.link} target="_blank" rel="noopener noreferrer"><button className="button-white button-transparent"><span>{site.text}</span></button></a>
                   ))}
                 </ul>
-              </Fade>
             </div>
             <div className="horiCenter">
               <FontAwesomeIcon icon={faArrowAltCircleLeft} size="2x" />
-              <Fade bottom><Link to='/projects'><button className="button-white button-transparent"><span>Back To Projects</span></button></Link></Fade>
+              <Link to='/projects'><button className="button-white button-transparent"><span>Back To Projects</span></button></Link>
             </div> 
           </div>
         </section>
