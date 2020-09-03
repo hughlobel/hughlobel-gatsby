@@ -69,7 +69,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
-        // Add any options here
+        ssr: false,
       },
     },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
