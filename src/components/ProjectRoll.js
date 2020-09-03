@@ -18,7 +18,7 @@ class ProjectRoll extends React.Component {
                   <Media queries={{ small: { maxWidth: 768 } }}>
                     {matches =>
                       matches.small ? (
-                        <Link to={post.fields.slug} className="twoColumns fillContainer projectBG" style={{backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0.75) 33%, rgba(0,0,0,0.95) 55%),url("/img/${post.frontmatter.imageUrl})`}}>
+                        <Link to={post.fields.slug} className="twoColumns fillContainer projectBG" style={{backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0.75) 33%, rgba(0,0,0,0.95) 55%),url("/img/${post.frontmatter.imageUrl}")`}}>
                           <div class="hideOnMobile"></div>
                           <div className="perfectCenter oddProject">
                             <h2>{post.frontmatter.title}</h2>

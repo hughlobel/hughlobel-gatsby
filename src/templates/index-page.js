@@ -31,10 +31,10 @@ export const IndexPageTemplate = ({
       <p class="videoInfo">This, and all videos on this site, are captured in MSDP: a multimedia platform created by Hugh Lobel</p>
       <div className='container titleContent'>
         <div>
-          <h2>{tagline}</h2>
+          <h2 className='titleTag'>{tagline}</h2>
         </div>
         <div className="titleImage">
-          <img src={`img/${tagImage}`} alt="Hugh Lobel speaking in the Atlas Building at CU Boulder"/>
+          <img className='titleImageImage' src={`img/${tagImage}`} alt="Hugh Lobel speaking in the Atlas Building at CU Boulder"/>
         </div>
       </div>
     </section>
@@ -42,14 +42,14 @@ export const IndexPageTemplate = ({
       <div className="fullRow">
         <div className="twoColumns featuredProjects">
           <div class="featuredTitle"><h2>Featured Projects</h2></div>
-          <a className="featuredOne perfectCenter" style={ sectionStyle }>
+          <a className="featuredOne" style={ sectionStyle }>
             <Link to={`/projects/${fp1.title}`} className="perfectCenter">
                 <h3 className="white">{fp1.title}</h3><br />
                 <p className="white category">{fp1.category}</p><br />
                 <p className="white">{fp1.excerpt}</p>
             </Link>
           </a>
-          <a className="featuredTwo perfectCenter" style={ sectionStyle2 }>
+          <a className="featuredTwo" style={ sectionStyle2 }>
             <Link to={`/projects/${fp2.title}`} className="perfectCenter">
               <h3>{fp2.title}</h3><br /> 
               <p className="category">{fp2.category}</p><br />

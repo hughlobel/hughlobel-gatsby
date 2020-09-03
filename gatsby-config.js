@@ -65,13 +65,8 @@ module.exports = {
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
-    },
-    {
-      resolve: `gatsby-plugin-styled-components`,
-      options: {
-        ssr: false,
-      },
-    },
+    }, 
+    `gatsby-plugin-styled-components`,
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
