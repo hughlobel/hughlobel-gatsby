@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
+import ClientOnly from '../components/ClientOnly'
 import Layout from '../components/Layout'
 import VideoBG from '../components/VideoBG'
 import config from '../config/config'
@@ -38,27 +39,29 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
+    <ClientOnly>
     <section className="fullScreen homeScreen">
-      <div className="fullRow">
-        <div className="twoColumns featuredProjects">
-          <div class="featuredTitle"><h2>Featured Projects</h2></div>
-          <a className="featuredOne" style={ sectionStyle }>
-            <Link to={`/projects/${fp1.title}`} className="perfectCenter">
-                <h3 className="white">{fp1.title}</h3><br />
-                <p className="white category">{fp1.category}</p><br />
-                <p className="white">{fp1.excerpt}</p>
-            </Link>
-          </a>
-          <a className="featuredFrontTwo" style={ sectionStyle2 }>
-            <Link to={`/projects/${fp2.title}`} className="perfectCenter">
-              <h3>{fp2.title}</h3><br /> 
-              <p className="category">{fp2.category}</p><br />
-              <p>{fp2.excerpt}</p>
-            </Link>
-          </a>
+        <div className="fullRow">
+          <div className="twoColumns featuredProjects">
+            <div class="featuredTitle"><h2>Featured Projects</h2></div>
+            <a className="featuredOne" style={ sectionStyle }>
+              <Link to={`/projects/${fp1.title}`} className="perfectCenter">
+                  <h3 className="white">{fp1.title}</h3><br />
+                  <p className="white category">{fp1.category}</p><br />
+                  <p className="white">{fp1.excerpt}</p>
+              </Link>
+            </a>
+            <a className="featuredFrontTwo" style={ sectionStyle2 }>
+              <Link to={`/projects/${fp2.title}`} className="perfectCenter">
+                <h3>{fp2.title}</h3><br /> 
+                <p className="category">{fp2.category}</p><br />
+                <p>{fp2.excerpt}</p>
+              </Link>
+            </a>
+          </div>
         </div>
-      </div>
     </section>
+    </ClientOnly>
     <section class="manifestoSection">
       <div className='container manifestoContent'>
         <h2>{manifestoSection}</h2>

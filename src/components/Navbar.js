@@ -12,6 +12,7 @@ import {
 } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import ClientOnly from '../components/ClientOnly'
 
 import config from '../config/config'
 const AppNavbar = class extends React.Component {
@@ -35,7 +36,9 @@ const AppNavbar = class extends React.Component {
     <div className='appNavBar main-navigation'>
     <Navbar expand="md">
       <Container fluid >
-    <NavbarBrand><Link to="/">{config.siteTitle} | <span>{config.siteSubtitle}</span></Link></NavbarBrand>
+        <ClientOnly>
+          <NavbarBrand><Link to="/">{config.siteTitle} | <span>{config.siteSubtitle}</span></Link></NavbarBrand>
+        </ClientOnly>
         <NavbarToggler onClick={this.toggle} />
         <FontAwesomeIcon icon={faBars} className="menuBars" />
         <Collapse isOpen={this.state.isOpen} navbar >
