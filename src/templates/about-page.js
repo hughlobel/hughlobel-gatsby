@@ -1,22 +1,37 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import reveal from '../config/revealActions'
 
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import VideoBG from '../components/VideoBG'
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({ 
+  title, 
+  content, 
+  introduction,
+  introImage,
+  background,
+  contentComponent 
+}) => {
   const PageContent = contentComponent || Content
 
   return (
     <div class="aboutPage">
       <section className="heroSection" >
-        <h2>{title}</h2>
+        <h2 {...reveal.slideDefault} >{title}</h2>
       </section>
       <VideoBG></VideoBG>
+      <section introSection>
+        <div className="bodyCopy container gridCenter twoColumns" >
+          <h2 className='perfectCenter' >{introduction}</h2>
+          <img src={`/img/${introImage}`} />
+        </div>
+      </section>
       <section className="formSection">
-        <div className="bodyCopy">
+        <div className="bodyCopy" >
+          <p>{background}</p>
         <PageContent className="content" content={content} />
         </div>
       </section>
@@ -27,6 +42,9 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
+  introduction: PropTypes.string,
+  introImage: PropTypes.string,
+  background: PropTypes.string,
   contentComponent: PropTypes.func,
 }
 
@@ -38,6 +56,9 @@ const AboutPage = ({ data }) => {
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
+        introduction={post.frontmatter.introduction}
+        introImage={post.frontmatter.introImage}
+        background={post.frontmatter.background}
         content={post.html}
       />
     </Layout>
@@ -56,6 +77,9 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        introduction
+        background
+        introImage
       }
     }
   }
