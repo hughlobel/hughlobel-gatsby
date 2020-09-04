@@ -6,7 +6,6 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-import Media from 'react-media';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRocket, faTools, faCodeBranch, faArrowAltCircleRight, faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons'
 
@@ -31,34 +30,17 @@ export const ProjectsPostTemplate = ({
     <div className="singleProjectPage">
       {helmet || ''}
       <div>
-        <Media queries={{ small: { maxWidth: 980 } }}>
-          {matches =>
-            matches.small ? (
-              <div
-                className="projectHeroSection" 
-                style={{backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0.75) 33%, rgba(0,0,0,0.75) 55%),url("/img/${imageUrl}")`}}
-              >
-                <div className="perfectCenter projectInfo">
-                  <h2>{title}</h2>
-                  <span>{category}</span>
-                  <p>{description}</p>
-                </div>
-              </div>
-            ) : (
-              <div 
-                className="twoColumns twoColumns-3-7 heroSection projectHeroSection" 
-                style={{backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.9) 55%),url("/img/${imageUrl}")`}}
-              >
-                <div class="hideOnMobile"></div>
-                  <div className="perfectCenter projectInfo">
-                    <h2>{title}</h2>
-                    <span>{category}</span>
-                    <p>{description}</p>
-                  </div>
-              </div>
-            )
-          }
-        </Media>
+        <div 
+          className="twoColumns twoColumns-3-7 heroSection projectHeroSection" 
+          style={{backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.9) 55%),url("/img/${imageUrl}")`}}
+        >
+          <div class="hideOnMobile"></div>
+            <div className="perfectCenter projectInfo">
+              <h2>{title}</h2>
+              <span>{category}</span>
+              <p>{description}</p>
+            </div>
+        </div>
         <section className="container projectContent">
             <PostContent content={content} />
         </section>
