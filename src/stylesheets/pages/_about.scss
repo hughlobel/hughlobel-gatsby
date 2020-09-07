@@ -1,4 +1,11 @@
 #main .aboutPage, #main .resumePage {
+    section {
+        min-height: calc(50vh - 60px);
+        padding-top: 80px;
+        padding-bottom: 80px;
+        h2 {font-size: 3rem; margin-bottom: 35px;}
+        p {font-size: 2rem; margin-bottom: 35px;}
+    }
     .heroSection {
         position: relative;
         min-height:calc(100vh - 60px);

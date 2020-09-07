@@ -150,16 +150,30 @@ footer .site-info {
 .height-2-5 {
     height: 40vh;
 }
+.contentSection {
+    min-height: calc(100vh - 60px);
+    padding-top: 80px;
+    padding-bottom: 80px;
+    h2 {
+        margin-bottom: 50px;
+    }
+}
 .hideOnMobile {display: none;}
 .container {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
     margin-right: auto;
     margin-left: auto;
-  }
+}
+.container-fluid {
+    width: 90%;
+    max-width: 90%; 
+    margin-right: auto;
+    margin-left: auto; 
+}
   @media (min-width: $break-small) {
     .container {
-      width: 750px;
+      width: 90%;
     }
     .hideOnMobile {display: inherit;}
   }
@@ -171,6 +185,7 @@ footer .site-info {
   @media (min-width: $break-large) {
     .container {
       width: 1366px;
+      max-width: 90%;
     }
   }
   ul {
@@ -210,6 +225,7 @@ footer .site-info {
     justify-content: center;
   }
   .gridCenter {
+      display: grid;
     place-content: center;
   }
   .fromBottomCenter {
