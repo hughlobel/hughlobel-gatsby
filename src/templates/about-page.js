@@ -43,7 +43,7 @@ export const AboutPageTemplate = ({
       </section>
       <VideoBG></VideoBG>
       <section className='contentSection gridCenter'>
-        <div className="container-fluid gridCenter twoColumns" >
+        <div className="container-full gridCenter twoColumns" >
           <div class='gridCenter'>
             <h2 className='perfectCenter' >{introTitle}</h2>
             <p className='perfectCenter' >{introCopy}</p>
@@ -52,7 +52,7 @@ export const AboutPageTemplate = ({
         </div>
       </section>
       <section className='contentSection gridCenter'>
-        <div className="container-fluid gridCenter twoColumns" >
+        <div className="container-full gridCenter twoColumns" >
           <div class='gridCenter'>
             <h2 className='perfectCenter' >{work1Title}</h2>
             <p className='perfectCenter' >{work1Copy}</p>
@@ -61,7 +61,7 @@ export const AboutPageTemplate = ({
         </div>
       </section>
       <section className='contentSection gridCenter'>
-        <div className="container-fluid gridCenter twoColumns" >
+        <div className="container-full gridCenter twoColumns" >
           <div class='gridCenter'>
             <h2 className='perfectCenter' >{work2Title}</h2>
             <p className='perfectCenter' >{work2Copy}</p>
@@ -70,7 +70,7 @@ export const AboutPageTemplate = ({
         </div>
       </section>
       <section className='contentSection gridCenter'>
-        <div className="container-fluid gridCenter twoColumns" >
+        <div className="container-full gridCenter twoColumns" >
           <div class='gridCenter'>
             <h2 className='perfectCenter' >{backgroundTitle}</h2>
             <p className='perfectCenter' >{backgroundCopy}</p>
@@ -79,18 +79,23 @@ export const AboutPageTemplate = ({
         </div>
       </section>
       <section className='contentSection gridCenter'>
-        <div className="container-fluid gridCenter twoColumns" >
+        <div className="container-full gridCenter twoColumns" >
           <div class='gridCenter'>
             <h2 className='perfectCenter' >{devPathTitle}</h2>
             <p className='perfectCenter' >{devPathCopy}</p>
-            <p className='perfectCenter' >{devPathList}</p>
+            {devPathList.map((event) => 
+              <div>
+                <p className='perfectCenter'>{event}</p>
+                <br />
+              </div>
+            )}
             <p className='perfectCenter' >{devPathOutro}</p>
           </div>
           <img src={`/img/${devPathImage}`} />
         </div>
       </section>
       <section className='contentSection gridCenter'>
-        <div className="container-fluid gridCenter twoColumns" >
+        <div className="container-full gridCenter twoColumns" >
           <div class='gridCenter'>
             <h2 className='perfectCenter' >{learnMoreTitle}</h2>
             <p className='perfectCenter' >{learnMoreCopy}</p>

@@ -1,13 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRocket, faTools, faCodeBranch, faArrowAltCircleRight, faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons'
+
+import Layout from '../components/Layout'
+import ImageBG from '../components/ImageBG'
+import Content, { HTMLContent } from '../components/Content'
+import reveal from '../config/revealActions'
+
 
 export const ProjectsPostTemplate = ({
   content,
@@ -29,20 +31,12 @@ export const ProjectsPostTemplate = ({
   return (
     <div className="singleProjectPage">
       {helmet || ''}
+      <ImageBG image={imageUrl} title={title} category={category} description={description} />
       <div>
-        <div 
-          className="twoColumns twoColumns-3-7 heroSection projectHeroSection" 
-          style={{backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.9) 55%),url("/img/${imageUrl}")`}}
-        >
-          <div class="hideOnMobile"></div>
-            <div className="perfectCenter projectInfo">
-              <h2>{title}</h2>
-              <span>{category}</span>
-              <p>{description}</p>
-            </div>
-        </div>
-        <section className="container projectContent">
+        <section className="projectContent">
+          <div className="container" {...reveal.fadeDefault}>
             <PostContent content={content} />
+          </div>
         </section>
         <section 
           className="additionalInfo"
@@ -50,46 +44,46 @@ export const ProjectsPostTemplate = ({
         >
           <div className="threeColumns">
             <div className="horiCenter">
-                <FontAwesomeIcon icon={faRocket} size="2x" />
-                <h3>Concepts</h3>
+                <FontAwesomeIcon icon={faRocket} size="2x" {...reveal.slideDefault}/>
+                <h3 {...reveal.slideDefault}>Concepts</h3>
                 <ul>
                   {concepts.map((concept) => (
-                    <li>{concept}</li>
+                    <li {...reveal.slideDefault}>{concept}</li>
                   ))}
                 </ul>
             </div>
             <div className="horiCenter">
-                <FontAwesomeIcon icon={faTools} size="2x" />
-                <h3>Tools</h3>
+                <FontAwesomeIcon icon={faTools} size="2x" {...reveal.slideDefault}/>
+                <h3 {...reveal.slideDefault}>Tools</h3>
                 <ul>
                   {tools.map((tools) => (
-                    <li>{tools}</li>
+                    <li {...reveal.slideDefault}>{tools}</li>
                   ))}
                 </ul>
             </div>
             <div className="horiCenter">
-                <FontAwesomeIcon icon={faCodeBranch} size="2x" />
-                <h3>Related Projects</h3>
+                <FontAwesomeIcon icon={faCodeBranch} size="2x" {...reveal.slideDefault}/>
+                <h3 {...reveal.slideDefault}>Related Projects</h3>
                 <ul className="">
                   {relatedLinks.map((site) => (
-                    <Link to={site.link}><button className="button-white button-transparent"><span>{site.text}</span></button></Link>
+                    <Link to={site.link}><button className="button-white button-transparent"><span {...reveal.slideDefault}>{site.text}</span></button></Link>
                   ))}
                 </ul>
             </div>
           </div>
           <div className="oneColumn">
             <div className="horiCenter">
-                <FontAwesomeIcon icon={faArrowAltCircleRight} size="2x" />
-                <h3>Learn More</h3>
+                <FontAwesomeIcon icon={faArrowAltCircleRight} size="2x" {...reveal.slideDefault}/>
+                <h3 {...reveal.slideDefault}>Learn More</h3>
                 <ul className="perfectCenter">
                   {more.map((site) => (
-                    <a href={site.link} target="_blank" rel="noopener noreferrer"><button className="button-white button-transparent"><span>{site.text}</span></button></a>
+                    <a href={site.link} target="_blank" rel="noopener noreferrer"><button className="button-white button-transparent"><span {...reveal.slideDefault}>{site.text}</span></button></a>
                   ))}
                 </ul>
             </div>
-            <div className="horiCenter">
-              <FontAwesomeIcon icon={faArrowAltCircleLeft} size="2x" />
-              <Link to='/projects'><button className="button-white button-transparent"><span>Back To Projects</span></button></Link>
+            <div className="horiCenter projectBack">
+              <FontAwesomeIcon icon={faArrowAltCircleLeft} size="2x" {...reveal.slideDefault}/>
+              <Link to='/projects'><button className="button-white button-transparent"><span {...reveal.slideDefault}>Back To Projects</span></button></Link>
             </div> 
           </div>
         </section>

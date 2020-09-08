@@ -6,45 +6,44 @@ featuredpost: true
 featuredimage: /img/2020websnap.jpg
 imageUrl: 2020websnap.jpg
 imageAlt: 2020websnap.jpg
-description: HughLobel.com is a portfolio site built with Gatsby.
+description: HughLobel.com is a portfolio site built with React and Gatsby, deployed on Netlify via Git.
 category: Website Development
 concepts:
-  - Functional Programming
-  - Transpilation
-  - Free and Open-Source Software
-  - Modular Design
-  - Synthesis Design
-  - Signal Processing
-  - Video Processing
-  - Data Processing
-  - Community Building + Social Media Marketing
+  - SPA (Single-Page Application) Website Development
+  - SSG (Static Site Generator) Website Development
+  - UX Design
 tools:
-  - Max 8
-  - Node for Max
-  - ISF
-  - VSynth
-  - Javascript / NodeJS
-  - Axios
-  - Parcel
-  - AWS
-  - DynamoDB
-  - Lambda
+  - React
+  - Gatsby
+  - NodeJS
+  - Netlify
+  - AWS Lambda
+  - SCSS
+  - Markdown
+  - Babel
+  - Webpack
+  - Git / Github
+  - Adobe Photoshop
+  - MSDP
+  - Adobe Premiere
 relatedLinks:
-  - link: '#'
-    text: Learn about the development of the MSDP website on the MSDP.app page
-  - link: '#'
-    text: Learn about the MSDP documentation, education, and social media campaigns
+  - link: 'https://hughlobel.com/resume'
+    text: View Hugh Lobel's Developer Resume
+  - link: 'https://hughlobel.com/artist-cv'
+    text: View Hugh Lobel's Artist CV
 more:
   - link: 'https://www.msdp.app'
-    text: Visit the MSDP website to download the platform
-  - link: 'https://www.facebook.com/groups/msdp.community/'
-    text: Join the MSDP Facebook group
+    text: Learn about Hugh's MSDP project
+  - link: 'https://soundcloud.com/hughlobel/'
+    text: Listen to music composed by Hugh Lobel
 tags:
-  - multimedia software
-  - music software
+  - web development
+  - web design
 ---
-replMax aims to wed the robust multimedia toolkit available in Cycling ’74’s Max 8 with the dynamic fun of a live-coding environment. replMax takes inspiration from popular live-coding languages like SuperCollider and Sonic Pi, but uses modern Javascript and Node.js as it’s foundational languages.  
+**HughLobel.com** is a professional portfolio website build by Hugh Lobel and designed by Michelle Cutler and Hugh Lobel.  
 
-In replMax you may write and execute any modern Javascript or Node.js code, but we also provide a special Max class to expedite the process of creating and mutating Max objects. The end result is a deep and engaging live-coding multimedia environment that is easy to learn and fun to execute!  
+## Development
+The website is built using React and Gatbsy, and deployed to Netlify for hosting via git. The site is built to be lean and fast-loading, using smart pre-processing to allow for large images and video across the site, while resourcing free hosting and without using any third-party CDN. The website is built to be easy to update post-launch by using markdown for content copy that gets compiled to html upon css. There is an optional custom CMS for modifying existing content or for adding new posts or pages based on custom built template files.
 
-As an additional bonus for Ableton Live 10 suite owners, replMax works equally well as a Max4Live device, and the package includes a template file for both an m4l audio effect and m4l instrument. This makes it extremely simple to live code Max inside of an Ableton Live 10 project.  
+## Design
+This site went through several design iterations, as we focused on the best ways to present the professional work of Hugh Lobel as both creative and meticulous. The final design is both familiar, from a portfolio design perspective, and engaging. The goal was to craft a site that unfolded like a story and shared some of the depth and breadth of Hugh's work.
