@@ -28,7 +28,7 @@ more:
     text: Visit the Acclaro Design Website
 tags:
   - web development
-  - web design
+  - web design 
 ---
 **AcclaroDesign.com** is a brochure website developed by Hugh Lobel and created by Acclaro Design.
 
