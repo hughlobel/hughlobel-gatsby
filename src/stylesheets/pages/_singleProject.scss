@@ -29,7 +29,7 @@
         min-width: 100%;
         h1, span, p {
             -webkit-text-stroke: 1px $white;
-            text-shadow: 4px 2px black;
+            text-shadow: 4px 2px $black;
         }
         h1 {font-size: 5rem; margin-bottom: 30px;}
         span {font-size: 2rem; margin-bottom: 30px;}
@@ -118,6 +118,7 @@
         background-repeat: no-repeat;
         svg {
             margin-bottom: 10px;
+            filter: drop-shadow( 3px 3px 2px $black);
         }
         h3 {
             border-bottom: 1px solid $white;
@@ -127,6 +128,9 @@
             margin-bottom: 40px;
             display: block;
             a {display: block;}
+        }
+        h3, ul, button, span {
+            text-shadow: 2px 2px $black;
         }
         button.button-white {
             margin-bottom: 20px;

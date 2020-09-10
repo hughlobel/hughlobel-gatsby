@@ -3,9 +3,9 @@ templateKey: projects-post
 title: AcclaroDesign.com
 date: 2020-12-20T15:04:10.000Z
 featuredpost: true
-featuredimage: /img/acclaroImage1.jpg
-imageUrl: acclaroImage1.jpg
-imageAlt: acclaroImage1.jpg
+featuredimage: /img/acclaroImage2.jpg
+imageUrl: acclaroImage2.jpg
+imageAlt: acclaroImage4.jpg
 description: >
   AcclaroDesign.com is a brochure site built on WordPress with a custom Divi theme.
 category: Website Development
