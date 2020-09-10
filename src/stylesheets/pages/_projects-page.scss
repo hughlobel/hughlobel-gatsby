@@ -1,6 +1,15 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the projects portfolio page.
 // -----------------------------------------------------------------------------
+.projectsPage {
+    .heroSection {
+        h1 {margin-bottom: 20px;}
+        p {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    }
+}
 .projectsList {
     .projectBG {
         background-size: cover;
@@ -19,7 +28,7 @@
         }
         p {
             font-size: 1.25rem;
-            margin-bottom: 5px;
+            margin-bottom: 15px;
             max-width: 500px;
             padding: 0 10%;
         }

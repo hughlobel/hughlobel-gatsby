@@ -1,31 +1,24 @@
 ---
 templateKey: projects-post
-title: MSDP Docs and Community
+title: Music and Tech Explained
 date: 2020-12-17T15:04:10.000Z
 featuredpost: true
-featuredimage: /img/msdp_2.0_banner.jpg
-imageUrl: msdpDoc2.jpg
-imageAlt: msdpDoc3.jpg
+featuredimage: /img/mteBanner.jpg
+imageUrl: mteBanner.jpg
+imageAlt: mteBanner.jpg
 concepts:
-  - Community Building + Social Media Marketing
   - SSG (Static-Site Generator) Website Development 
-  - Video Creation
-  - Website Copywriting (Blog Posts)
-  - Manual Copywriting
+  - Software Distribution
+  - Website Copywriting
   - Web Design
+  - Community Building + Social Media Marketing
 tools:
-  - YouTube
-  - Facebook
-  - Twitter
-  - Instagram
-  - Patreon
-  - MailChimp
-  - Adobe Photoshop
-  - Adobe Premiere Pro
   - Hugo
   - Markdown
   - Javascript / NodeJS
   - Go
+  - AWS S3
+  - AWS Lambda
 relatedLinks:
   - link: '#'
     text: Learn about the MSDP program
@@ -36,14 +29,14 @@ more:
     text: Visit the MSDP website
   - link: 'https://www.facebook.com/groups/msdp.community/'
     text: Join the MSDP Facebook group
-description: To support the community of MSDP developers, an online manual was created, and a social media campaign was launched.
-category: Software Documentation and Community Outreach
+description: A home-learning education project that provided free classes in the Max 8 language. 
+category: Technology Education
 tags:
   - multimedia software
   - music software
 ---
 ## Overview
-To support the growth and maintanance of a global community for a robust and complex software platform, MSDP provides a wealth of resources for education and instruction, as well as a variety of ways to engage with community members across several online platforms.
+M&TE was an education project that ran during the early months of the COVID-19 pandemic, to provide an opportunity for people to learn new skills at home for free.  
 
 ## Development Notes
 The MSDP website was completely rebuilt from the ground up to coincide with the launch of MSDP version 2.0. Because this was a personal project, both the development and design was lead by Hugh Lobel, but Michelle Cutler was brought on as a design consultant, and she assisted in the creation of a variety of new assets, including a new logo and new photography.
