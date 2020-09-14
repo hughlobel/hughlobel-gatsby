@@ -3,34 +3,33 @@ templateKey: projects-post
 title: Amplifire Learning Platform
 date: 2020-12-20T15:04:10.000Z
 featuredpost: true
-featuredimage: /img/acclaroImage2.jpg
-imageUrl: acclaroImage2.jpg
-imageAlt: acclaroImage4.jpg
+featuredimage: /img/ampPlat1.jpg
+imageUrl: ampPlat2.jpg
+imageAlt: ampPlat1.jpg
 description: >
   Front-end development for a redesign of their flagship platform.
-category: Website Development
+category: Web App Development
 concepts:
-  - WordPress Website Development
-  - Divi Theme Development
+  - Web Application Development
+  - Website Development
+  - Online Learning
   - UX Design
 tools:
-  - WordPress
-  - Divi
+  - HTML/JS/CSS
+  - Photoshop
   - Axure
   - Zeplin
 relatedLinks:
   - link: '#'
-    text: An Acclaro Project
-  - link: '#'
     text: Another Acclaro Project
 more:
-  - link: 'https://acclarodesign.com'
-    text: Visit the Acclaro Design Website
+  - link: 'https://amplifire.com/'
+    text: Visit the Amplifire Website
 tags:
   - web development
   - web design 
 ---
-**AcclaroDesign.com** is a brochure website developed by Hugh Lobel and created by Acclaro Design.
+**Amplifire** worked closely with **Acclaro Design** for the redesign of their online learning platform. As one of two front-end developers joining the project with Acclaro Design, Hugh Lobel worked closely with Amplifire's internal development team to build functional models of the platform. Acclaro, and Hugh, also assisted with the redesign of their website.
 
 ## Development Notes
-This website is a WordPress site, developed from in-house designs and built with a custom Divi theme. We chose WordPress so that content could be moderated by admins with different skill-sets. For this project, we went with Divi because it allowed us to deliver a high-quality, professionally developed site while expediting development time. The combination of WordPress and Divi ensures that updates to the pages design and content is extremely approachable post-launch. Axure was used for wireframing, Sketch was used for design, and Zeplin was used to share information between design and development.
+Working closely with an internal team provided a chance to really come to understand, and respond to, the needs of the client. By working on-site several times a week, Acclaro and Amplifire were able to hold regular in-person meetings, and the teams were able to move from drafts to finished realizations rapidly. Regular conversations across desks between their internal developers and the Acclaro team meant that troubleshooting could happen in real-time and peer-review of code could insure that both teams were on the same page. Acclaro was able to see the results of their collaboration bear fruit as elements of their work was rolled out into the live platform, and both teams could respond to gathered data to further improve their processes. Since Acclaro, and Hugh, were also working to redesign Amplifire's website, we were able to easily share design assets between the two domains, and maintained a consistent aesthetic across both.  
