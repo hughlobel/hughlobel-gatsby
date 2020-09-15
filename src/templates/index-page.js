@@ -28,7 +28,7 @@ export const IndexPageTemplate = ({
   bioSection
 }) => (
   <div class="homePage">
-    <VideoBG></VideoBG>
+    <VideoBG video="test_seq_1"></VideoBG>
     <section class="titleSection">
       <p class="videoInfo" {...reveal.slideDefault} >This, and all videos on this site, are captured in MSDP: a multimedia platform created by Hugh Lobel</p>
       <div className='container titleContent'>

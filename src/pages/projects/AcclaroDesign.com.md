@@ -30,6 +30,7 @@ tags:
   - web development
   - web design 
 ---
+## Project Overview
 **AcclaroDesign.com** is a brochure website developed by Hugh Lobel and created by Acclaro Design.
 
 ## Development Notes

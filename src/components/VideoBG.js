@@ -12,11 +12,12 @@ class VideoBG extends Component {
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     let vidNum = vidRan(config.vidCount)
+    let vidName = !this.props.video ? `video${vidNum}` : this.props.video
 
     return (
       <section class="videoHero">
         <video className='videoTag' poster='img/default.jpg' autoPlay muted>
-          <source src={`img/video${vidNum}.mp4`} type='video/mp4' />
+          <source src={`img/${vidName}.mp4`} type='video/mp4' />
         </video>
     </section>
     );

@@ -7,18 +7,18 @@ featuredimage: /img/mteBanner.jpg
 imageUrl: mteBanner.jpg
 imageAlt: mteBanner.jpg
 concepts:
-  - SSG (Static-Site Generator) Website Development 
-  - Software Distribution
-  - Website Copywriting
-  - Web Design
+  - Online Learning 
+  - Video Streaming
+  - Multimedia Software Development
   - Community Building + Social Media Marketing
 tools:
-  - Hugo
-  - Markdown
-  - Javascript / NodeJS
-  - Go
-  - AWS S3
-  - AWS Lambda
+  - Max 8
+  - OBS
+  - Twitch
+  - Youtube
+  - Patreon
+  - Adobe Photoshop
+  - Adobe Premiere
 relatedLinks:
   - link: '#'
     text: Learn about the MSDP program
@@ -27,8 +27,6 @@ relatedLinks:
 more:
   - link: 'https://www.msdp.app'
     text: Visit the MSDP website
-  - link: 'https://www.facebook.com/groups/msdp.community/'
-    text: Join the MSDP Facebook group
 description: A home-learning education project that provided free classes in the Max 8 language. 
 category: Technology Education
 tags:
@@ -36,33 +34,7 @@ tags:
   - music software
 ---
 ## Overview
-M&TE was an education project that ran during the early months of the COVID-19 pandemic, to provide an opportunity for people to learn new skills at home for free.  
+M&TE was an education project that ran during the early months of the COVID-19 pandemic, to provide an opportunity for people to learn the Max 8 language at home for free.  
 
-## Development Notes
-The MSDP website was completely rebuilt from the ground up to coincide with the launch of MSDP version 2.0. Because this was a personal project, both the development and design was lead by Hugh Lobel, but Michelle Cutler was brought on as a design consultant, and she assisted in the creation of a variety of new assets, including a new logo and new photography.
-
-When building this site, speed was a huge focus. There were a number of speed-related problems that had to be addressed:  
-
----
-
-**Problem #1.** Because MSDP is a popular app in academia, the website would be visited by people on shared networks, either at school or at dorms. To ensure a good experience on slow networks, the website needed to have a very small footprint, and the site couldn't depend on large libraries that needed to be downloaded.  
-
-**Solution #1.** To address this issue, the site was built with Hugo, a static-site generator that compiles projects into incredibly lean websites. Hugo allowed the project to avoid using large Javascript libraries to tackle common problems. On build-time, Hugo does an excellent job of compiling the project down to a very small footprint. Netlify was selected as the hosting platform, as it specializes in hosting serverless content and is optimized around it. For content delivery, Netlify offers it's own CDN, but video was hosted on YouTube and embedded on the site, so that larger files would load in after the site's first contentful paint.
-
----
-
-**Problem #2.** Because MSDP is a relatively young application without a marketing budget, visitors need to know *immediately* what the program is, and need to very quickly feel compelled to try it out. This is complicated by the fact that MSDP is a very large, multi-faceted program that is applicable in a large variety of artistic spaces.  
-
-**Solution #2.** It was determined that visitors needed to be convinced to try the application before they began scrolling past the fold on the home page. Along with the program name, the home page hero contains three elements:  
-
-* A one sentence description that emphasizes that the program is free and open-source (both explaining what it is succintly, and giving you a compelling reason to try it). 
-* A download button with the application's logo (re-inforcing brand and compelling the visitor to act). 
-* A carefully designed YouTube video embedded into the hero of the site, that explains the program while sharing audio and visuals built directly in the program.
-
-The rest of the home page includes images and copy that explain the value of the application for different scenarios and different types of artists. At the end of the page, before the mailing list sign-up, is another call to action that leads to the download page while reminding the visitor that the application is both free and open-source.
-
----
-
-**Problem #3.** The executable for the file is slightly over one gigabyte in size. On affordable hosting services, files of this size are not permitted, or if they are allowed, download slowly for the visitor. When downloading the application from the server that hosted the 1.0 version of MSDP, users could expect to wait 20-30 minutes to download this much data.
-
-**Solution #3:** Amazon Web Services (AWS)' S3 provided the perfect solution to this dilemma. By hosting the files on Amazon, users can download the executable at the same speeds available to industry leaders. Along with S3, AWS was also utilized to provide functions that would normally be available on websites that leverage a persistent server.
+## Notes
+Music and Technology Explained was a channel that Hugh created in the first months of the outbreak, in response to the lockdowns that were being implemented across the country. Hugh wanted to provide an opportunity for people stuck at home to learn some new skills, while also taking the opportunity to explore social media streaming platforms. MT&E streamed full clasroom-style videos (1-hour + ) on Twitch and YouTube, and included materials for the lessons for free during the streams.

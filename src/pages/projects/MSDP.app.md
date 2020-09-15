@@ -55,9 +55,9 @@ When building this site, speed was a huge focus. There were a number of speed-re
 
 **Solution #2.** It was determined that visitors needed to be convinced to try the application before they began scrolling past the fold on the home page. Along with the program name, the home page hero contains three elements:  
 
-* A one sentence description that emphasizes that the program is free and open-source (both explaining what it is succintly, and giving you a compelling reason to try it). 
-* A download button with the application's logo (re-inforcing brand and compelling the visitor to act). 
-* A carefully designed YouTube video embedded into the hero of the site, that explains the program while sharing audio and visuals built directly in the program.
+1. A one sentence description that emphasizes that the program is free and open-source (both explaining what it is succintly, and giving you a compelling reason to try it). 
+2. A download button with the application's logo (re-inforcing brand and compelling the visitor to act). 
+3. A carefully designed YouTube video embedded into the hero of the site, that explains the program while sharing audio and visuals built directly in the program.
 
 The rest of the home page includes images and copy that explain the value of the application for different scenarios and different types of artists. At the end of the page, before the mailing list sign-up, is another call to action that leads to the download page while reminding the visitor that the application is both free and open-source.
 
@@ -65,4 +65,4 @@ The rest of the home page includes images and copy that explain the value of the
 
 **Problem #3.** The executable for the file is slightly over one gigabyte in size. On affordable hosting services, files of this size are not permitted, or if they are allowed, download slowly for the visitor. When downloading the application from the server that hosted the 1.0 version of MSDP, users could expect to wait 20-30 minutes to download this much data.
 
-**Solution #3:** Amazon Web Services (AWS)' S3 provided the perfect solution to this dilemma. By hosting the files on Amazon, users can download the executable at the same speeds available to industry leaders. Along with S3, AWS was also utilized to provide functions that would normally be available on websites that leverage a persistent server.
+**Solution #3:** Amazon Web Services (AWS)' S3 provided the perfect solution to this dilemma. By hosting the files on Amazon's servers, users can download the executable at the same speeds available to industry leaders. Along with S3, AWS was also utilized to provide functions that would normally be available on websites that leverage a persistent server.
