@@ -27,15 +27,15 @@ tools:
   - MSDP
   - Adobe Premiere
 relatedLinks:
+  - link: '/projects/MSDP 2'
+    text: View Hugh Lobel's MSDP Project
+  - link: '/projects/MSDP.app'
+    text: Learn about the MSDP website
+more:
   - link: 'https://hughlobel.com/resume'
-    text: View Hugh Lobel's Developer Resume
+    text: View Hugh Lobel's Resume
   - link: 'https://hughlobel.com/artist-cv'
     text: View Hugh Lobel's Artist CV
-more:
-  - link: 'https://www.msdp.app'
-    text: Learn about Hugh's MSDP project
-  - link: 'https://soundcloud.com/hughlobel/'
-    text: Listen to music composed by Hugh Lobel
 tags:
   - web development
   - web design

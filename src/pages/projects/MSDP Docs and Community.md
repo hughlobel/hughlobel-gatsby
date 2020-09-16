@@ -27,10 +27,10 @@ tools:
   - Javascript / NodeJS
   - Go
 relatedLinks:
-  - link: '#'
+  - link: '/projects/MSDP 2'
     text: Learn about the MSDP program
-  - link: '#'
-    text: Learn about the MSDP documentation, education, and social media campaigns
+  - link: '/projects/MSDP.app'
+    text: Learn about the MSDP website
 more:
   - link: 'https://www.msdp.app'
     text: Visit the MSDP website
@@ -46,7 +46,7 @@ tags:
 To support the growth and maintenance of a global community for a robust and complex software platform, MSDP provides a wealth of resources for education and instruction, as well as a variety of ways to engage with community members across several online platforms.
 
 ## Notes
-To coincide with the release of MSDP 2.0, Hugh began a social media campaign to increase visibility of the application, and developed online educational material in the form of both an online manual and video tutorials hosted on YouTube. 
+To coincide with the release of MSDP 2.0, Hugh began a social media campaign to increase visibility of the application, and developed online educational material in the form of both an online manual and video tutorials hosted on YouTube.
 
 The social media campaign posted primarily on Facebook and Twitter, as the two platforms that were popular for art communities, and expanded out to a reddit forum and an instagram account. This allowed a larger variety of users to find MSDP, and offered more ways for different users to interact with Hugh and with other creators in the platform. A mailing list was populated and maintained, allowing dedicated followers to receive update information, preview stories, and release notes at the same time that updates were posted to the main website.  
 

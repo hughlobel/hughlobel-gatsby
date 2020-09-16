@@ -20,10 +20,12 @@ tools:
   - AWS S3
   - AWS Lambda
 relatedLinks:
-  - link: '#'
+  - link: '/projects/MSDP 2'
     text: Learn about the MSDP program
-  - link: '#'
+  - link: '/projects/MSDP Docs and Community'
     text: Learn about the MSDP documentation, education, and social media campaigns
+  - link: '/projects/hughlobel.com'
+    text: Learn how Hugh created this website, HughLobel.com
 more:
   - link: 'https://www.msdp.app'
     text: Visit the MSDP website

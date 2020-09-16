@@ -12,33 +12,19 @@ concepts:
   - Functional Programming
   - Transpilation
   - Free and Open-Source Software
-  - Modular Design
-  - Synthesis Design
-  - Signal Processing
-  - Video Processing
-  - Data Processing
-  - Community Building + Social Media Marketing
+  - Live Performance Environments
 tools:
   - Max 8
   - Node for Max
-  - ISF
-  - VSynth
-  - Javascript / NodeJS
-  - Axios
-  - Parcel
-  - AWS
-  - DynamoDB
-  - Lambda
+  - React
+  - Express
+  - Codemirror
 relatedLinks:
-  - link: '#'
-    text: Learn about the development of the MSDP website on the MSDP.app page
-  - link: '#'
-    text: Learn about the MSDP documentation, education, and social media campaigns
+  - link: '/projects/MSDP 2'
+    text: Learn about MSDP, Hugh's large-scale multimedia performance platform
 more:
-  - link: 'https://www.msdp.app'
-    text: Visit the MSDP website to download the platform
-  - link: 'https://www.facebook.com/groups/msdp.community/'
-    text: Join the MSDP Facebook group
+  - link: '#'
+    text: Official download link and more coming soon!
 tags:
   - multimedia software
   - music software

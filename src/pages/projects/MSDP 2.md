@@ -24,13 +24,13 @@ tools:
   - Javascript / NodeJS
   - Axios
   - Parcel
-  - AWS
-  - DynamoDB
-  - Lambda
+  - AWS S3
+  - AWS DynamoDB
+  - AWS Lambda
 relatedLinks:
-  - link: '#'
+  - link: '/projects/MSDP.app'
     text: Learn about the development of the MSDP website on the MSDP.app page
-  - link: '#'
+  - link: '/projects/MSDP Docs and Community/'
     text: Learn about the MSDP documentation, education, and social media campaigns
 more:
   - link: 'https://www.msdp.app'
