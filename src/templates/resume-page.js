@@ -23,7 +23,7 @@ export const ResumePageTemplate = ({
 
   return (
     <div class="resumePage innerPage">
-      <section className="heroSection" >
+      <section className="heroSection heroVideo" >
         <h2>{title}</h2>
       </section>
       <VideoBG></VideoBG>

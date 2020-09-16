@@ -28,7 +28,7 @@ export const IndexPageTemplate = ({
   bioSection
 }) => (
   <div class="homePage">
-    <VideoBG video="test_seq_1"></VideoBG>
+    <VideoBG video="homeVideo" loop='true'></VideoBG>
     <section class="titleSection">
       <div className='container titleContent'>
         <div {...reveal.slideDefault}>

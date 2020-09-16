@@ -4,6 +4,9 @@
 footer .site-info {
     @include page-width;
 }
+.videoHero, .heroVideo {
+    cursor: url(/img/down-arrow.png), auto;
+}
 .barrier-full {
     border-bottom: 1px solid $white;
     margin-bottom: 20px;

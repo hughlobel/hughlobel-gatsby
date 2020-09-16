@@ -38,7 +38,7 @@ export const AboutPageTemplate = ({
 
   return (
     <div class="aboutPage">
-      <section className="heroSection" >
+      <section className="heroSection heroVideo" >
         <h2 {...reveal.slideDefault} >{title}</h2>
       </section>
       <VideoBG></VideoBG>
