@@ -4,8 +4,17 @@
 footer .site-info {
     @include page-width;
 }
-.videoHero, .heroVideo, .imageHero {
-    cursor: url(/img/down-arrow.png), auto;
+section, div, article, .formSection, label {
+    cursor: url(/img/circlemaincursor.png), auto; 
+}
+a, button, button span {
+    cursor: url(/img/circlehover.png), auto;
+}
+.videoHero, .heroVideo, .imageHero, .imageHero .heroImage {
+    cursor: url(/img/downarrow_75.png), auto;
+}
+.contactModal, .contactModal .formSection .modalCloseIcon {
+    cursor: url(/img/circleX_close.png), auto;
 }
 .barrier-full {
     border-bottom: 1px solid $white;
