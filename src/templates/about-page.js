@@ -6,6 +6,7 @@ import reveal from '../config/revealActions'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import VideoBG from '../components/VideoBG'
+import ImageBG from '../components/ImageBG'
 
 export const AboutPageTemplate = ({ 
   title, 
@@ -38,10 +39,11 @@ export const AboutPageTemplate = ({
 
   return (
     <div class="aboutPage">
-      <section className="heroSection heroVideo" >
+      <ImageBG image='hughAbout.jpg' title={title} light='true' />
+      {/* <section className="heroSection heroVideo" >
         <h2 {...reveal.slideDefault} >{title}</h2>
-      </section>
-      <VideoBG></VideoBG>
+      </section> */}
+      {/* <VideoBG></VideoBG> */}
       <section className='contentSection gridCenter'>
         <div className="container-full gridCenter twoColumns" >
           <div class='gridCenter'>
