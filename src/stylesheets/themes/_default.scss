@@ -68,19 +68,39 @@ a, button, button span {
     margin: 0;
 }
 .twoColumns-4-6 {
-    @extend .twoColumns;
+    display: grid;
     grid-template-columns: 40% 60%;
     @media screen and (max-width: $break-small) {
         grid-template-columns: 100%;
     }
 }
+.twoColumns-7-3 {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    @media screen and (max-width: $break-small) {
+        grid-template-columns: 100%;
+    }
+}
+.twoColumns-6-4 {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    @media screen and (max-width: $break-small) {
+        grid-template-columns: 100%;
+    }
+}
 .twoColumns-35-65 {
-    @extend .twoColumns-4-6;
+    display: grid;
     grid-template-columns: 35% 65%;
+    @media screen and (max-width: $break-small) {
+        grid-template-columns: 100%;
+    }
 }
 .twoColumns-3-7 {
-    @extend .twoColumns-4-6;
+    display: grid;
     grid-template-columns: 30% 70%;
+    @media screen and (max-width: $break-small) {
+        grid-template-columns: 100%;
+    }
 }
 .twoColumns > div {
     &:first-child {
@@ -125,11 +145,6 @@ a, button, button span {
     display: grid;
     grid-template-rows: 100%;
 }
-
-.twoRows-7-3 {
-    @extend .twoRows-6-4;
-    grid-template-rows: 70% 30%;
-}
 .twoRows-8-2 {
     @extend .twoRows-6-4;
     grid-template-rows: 80% 20%;
@@ -137,14 +152,6 @@ a, button, button span {
 .threeRows {
     display: grid;
     grid-template-rows: 33.3% 33.3% 33.4%;
-}
-.twoColumns-7-3 {
-    display: grid;
-    grid-template-columns: 70% 30%;
-}
-.twoColumns-6-4 {
-    display: grid;
-    grid-template-columns: 60% 40%;
 }
 .fillContainer {
     height: 100%;
@@ -162,6 +169,8 @@ a, button, button span {
 .height-2-5 {
     height: 40vh;
 }
+.leftAlign {text-align: left;}
+.rightAlign {text-align: right;}
 .contentSection {
     min-height: calc(100vh - 60px);
     padding-top: 80px;
