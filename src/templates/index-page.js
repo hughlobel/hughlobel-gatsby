@@ -30,12 +30,12 @@ export const IndexPageTemplate = ({
   <div class="homePage">
     <VideoBG video="homeVideo" loop='true'></VideoBG>
     <section class="titleSection">
-      <div className='container-full titleContent twoColumns-35-65 gridCenter'>
-        <div className="titleImage" {...reveal.slideDefault}>
-          <img className='titleImageImage' src={`img/${tagImage}`} alt="Hugh Lobel speaking in the Atlas Building at CU Boulder"/>
-        </div>
+      <div className='container-full titleContent twoColumns-6-4 gridCenter'>
         <div {...reveal.slideDefault} className='gridCenter container'>
           <h2 className='titleTag leftAlign'>{tagline}</h2>
+        </div>
+        <div className="titleImage" {...reveal.slideDefault}>
+          <img className='titleImageImage' src={`img/${tagImage}`} alt="Hugh Lobel speaking in the Atlas Building at CU Boulder"/>
         </div>
       </div>
     </section>
@@ -45,14 +45,14 @@ export const IndexPageTemplate = ({
           <div className="twoColumns featuredProjects" >
             <div class="featuredTitle" {...reveal.slideDefault} ><h2>Featured Projects</h2></div>
             <a className="featuredOne" style={ sectionStyle }>
-              <Link to={`/projects/${fp1.title}`} className="perfectCenter">
+              <Link to={`/portfolio/${fp1.title}`} className="perfectCenter">
                   <h3 className="white">{fp1.title}</h3><br />
                   <p className="white category">{fp1.category}</p><br />
                   <p className="white">{fp1.excerpt}</p>
               </Link>
             </a>
             <a className="featuredFrontTwo" style={ sectionStyle2 }>
-              <Link to={`/projects/${fp2.title}`} className="perfectCenter">
+              <Link to={`/portfolio/${fp2.title}`} className="perfectCenter">
                 <h3>{fp2.title}</h3><br /> 
                 <p className="category">{fp2.category}</p><br />
                 <p>{fp2.excerpt}</p>
@@ -68,7 +68,7 @@ export const IndexPageTemplate = ({
         <div className="actionCall twoColumns">
           <div className="diveIn">
             <h3 {...reveal.slideDefault} >Dive In...</h3>
-            <Link to="/projects"><div {...reveal.slideDefault} ><button className="button-transparent"><span>Explore Projects</span></button></div></Link>
+            <Link to="/portfolio"><div {...reveal.slideDefault} ><button className="button-transparent"><span>Explore Portfolio</span></button></div></Link>
           </div>
           <div className="reachOut">
             <h3 {...reveal.slideDefault} >...or Reach Out!</h3>

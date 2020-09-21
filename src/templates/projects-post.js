@@ -83,7 +83,7 @@ export const ProjectsPostTemplate = ({
             </div>
             <div className="horiCenter projectBack">
               <FontAwesomeIcon icon={faArrowAltCircleLeft} size="2x" {...reveal.slideDefault}/>
-              <Link to='/projects'><button className="button-white button-transparent"><span {...reveal.slideDefault}>Back To Projects</span></button></Link>
+              <Link to='/portfolio'><button className="button-white button-transparent"><span {...reveal.slideDefault}>Back To Projects</span></button></Link>
             </div> 
           </div>
         </section>

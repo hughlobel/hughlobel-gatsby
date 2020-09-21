@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import reveal from '../config/revealActions'
 
 import Layout from '../components/Layout'
@@ -36,7 +36,18 @@ export const AboutPageTemplate = ({
   contentComponent 
 }) => {
   const PageContent = contentComponent || Content
-
+  const bgSection1 = {
+    backgroundImage: "linear-gradient(rgba(248,248,255,0.7), rgba(248,248,255,0.7)), url('/img/" + work1Image + "')"
+  }
+  const bgSection2 = {
+    backgroundImage: "linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('/img/" + work2Image + "')"
+  }
+  const bgSection3 = {
+    backgroundImage: "linear-gradient(rgba(248,248,255,0.7), rgba(248,248,255,0.7)), url('/img/" + backgroundImage + "')"
+  }
+  const bgSection4 = {
+    backgroundImage: "linear-gradient(rgba(248,248,255,0.7), rgba(248,248,255,0.7)), url('/img/" + learnMoreImage + "')"
+  }
   return (
     <div class="aboutPage">
       <ImageBG image='hughAbout.jpg' title={title} light='true' />
@@ -48,61 +59,57 @@ export const AboutPageTemplate = ({
         <div className="container-full gridCenter twoColumns" >
           <div class='gridCenter'>
             <h2 className='perfectCenter' >{introTitle}</h2>
-            <p className='perfectCenter' >{introCopy}</p>
+            <h3 className='perfectCenter' >{introCopy}</h3>
           </div>
           <img src={`/img/${introImage}`} />
         </div>
       </section>
-      <section className='contentSection gridCenter'>
-        <div className="container-full gridCenter twoColumns" >
+      <section className='contentSection gridCenter' style={bgSection1}>
+        <div className="container-full gridCenter" >
           <div class='gridCenter'>
-            <h2 className='perfectCenter' >{work1Title}</h2>
-            <p className='perfectCenter' >{work1Copy}</p>
+            <h2 className='perfectCenter textBorder' >{work1Title}</h2>
+            <p className='perfectCenter textBorder' >{work1Copy}</p>
           </div>
-          <img src={`/img/${work1Image}`} />
         </div>
       </section>
-      <section className='contentSection gridCenter'>
-        <div className="container-full gridCenter twoColumns" >
+      <section className='contentSection gridCenter' style={bgSection2}>
+        <div className="container-full gridCenter" >
           <div class='gridCenter'>
-            <h2 className='perfectCenter' >{work2Title}</h2>
-            <p className='perfectCenter' >{work2Copy}</p>
+            <h2 className='perfectCenter white textBorder' >{work2Title}</h2>
+            <p className='perfectCenter white textBorder' >{work2Copy}</p>
           </div>
-          <img src={`/img/${work2Image}`} />
         </div>
       </section>
-      <section className='contentSection gridCenter'>
-        <div className="container-full gridCenter twoColumns" >
+      <section className='contentSection gridCenter' style={bgSection3}>
+        <div className="container-full gridCenter" >
           <div class='gridCenter'>
-            <h2 className='perfectCenter' >{backgroundTitle}</h2>
-            <p className='perfectCenter' >{backgroundCopy}</p>
+            <h2 className='perfectCenter textBorder' >{backgroundTitle}</h2>
+            <p className='perfectCenter textBorder' >{backgroundCopy}</p>
           </div>
-          <img src={`/img/${backgroundImage}`} />
         </div>
       </section>
-      <section className='contentSection gridCenter'>
-        <div className="container-full gridCenter twoColumns" >
-          <div class='gridCenter'>
-            <h2 className='perfectCenter' >{devPathTitle}</h2>
-            <p className='perfectCenter' >{devPathCopy}</p>
-            {devPathList.map((event) => 
-              <div>
-                <p className='perfectCenter'>{event}</p>
-                <br />
-              </div>
-            )}
-            <p className='perfectCenter' >{devPathOutro}</p>
+      <section className='contentSection gridCenter backgroundSection'>
+        <div className="container-full gridCenter" >
+          <h2 className='perfectCenter' >{devPathTitle}</h2>
+          <p className='perfectCenter' >{devPathCopy}</p>
+          <div className='gridCenter twoColumns listSection'>
+            <div>
+              {devPathList.map((event) => 
+                <ul>
+                  <li className=''>{event}</li>
+                </ul>
+              )}
+            </div>
+            <img src={`/img/${devPathImage}`} />
           </div>
-          <img src={`/img/${devPathImage}`} />
+          <p className='perfectCenter' >{devPathOutro}</p>
         </div>
       </section>
-      <section className='contentSection gridCenter'>
-        <div className="container-full gridCenter twoColumns" >
-          <div class='gridCenter'>
-            <h2 className='perfectCenter' >{learnMoreTitle}</h2>
-            <p className='perfectCenter' >{learnMoreCopy}</p>
-          </div>
-          <img src={`/img/${learnMoreImage}`} />
+      <section className='contentSection gridCenter' style={bgSection4}>
+        <div className="container-full gridCenter" >
+          <h2 className='perfectCenter textBorder' >{learnMoreTitle}</h2>
+          <p className='perfectCenter textBorder' >{learnMoreCopy}</p>
+          <Link to="/portfolio"><div><button className="button-transparent"><span>Explore Portfolio</span></button></div></Link>
         </div>
       </section>
     </div>

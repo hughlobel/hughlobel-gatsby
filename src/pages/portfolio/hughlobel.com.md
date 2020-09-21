@@ -27,9 +27,9 @@ tools:
   - MSDP
   - Adobe Premiere
 relatedLinks:
-  - link: '/projects/MSDP 2'
+  - link: '/portfolio/MSDP 2'
     text: View Hugh Lobel's MSDP Project
-  - link: '/projects/MSDP.app'
+  - link: '/portfolio/MSDP.app'
     text: Learn about the MSDP website
 more:
   - link: 'https://hughlobel.com/resume'

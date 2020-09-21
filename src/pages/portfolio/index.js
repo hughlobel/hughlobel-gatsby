@@ -10,8 +10,8 @@ export default class ProjectIndexPage extends React.Component {
       <Layout>
         <div class="projectsPage">
           <section className="heroSection simpleHero">
-            <h1 {...reveal.slideDefault}>Projects</h1>
-            <p {...reveal.slideDefault}>Below you'll find a collection of some of Hugh's favorite projects. Dive in to any project to learn about the details of the work, and to find out more about what went in to bringing the concepts to life.</p>
+            <h1 {...reveal.slideDefault}>Portfolio</h1>
+            <p {...reveal.slideDefault}>Below you'll find a curated collection of client and personal projects. Dive in to any project for more details, and to find out more about what went in to bringing the concepts to life.</p>
           </section>
           <ProjectRoll />
         </div>

@@ -5,6 +5,27 @@
         padding-bottom: 80px;
         h2 {font-size: 3rem; margin-bottom: 35px;}
         p {font-size: 2rem; margin-bottom: 35px;}
+        &.contentSection {
+            h3 {font-size: 2rem; margin-bottom: 35px;}
+            p {font-size: 2rem; margin-bottom: 35px;}
+            a {text-align: center;}
+            background-size: cover;
+            background-position: 50%;
+            min-height: calc(100vh - 60px);
+            &.backgroundSection {
+                p {font-size: 1.5rem; margin-bottom: 35px; text-align: left; line-height: 1.6;}
+            }
+            .listSection {
+                margin-top: 5px;
+                margin-bottom: 60px;
+                ul {list-style: disc; padding-right: 20px;}
+                img {width: 100%;}
+                
+            }
+        }
+        &.imageBGSection {
+            background-color: $white-transparent;
+        }
     }
     .heroSection {
         position: relative;

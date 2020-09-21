@@ -44,8 +44,8 @@ const AppNavbar = class extends React.Component {
         <Collapse isOpen={this.state.isOpen} navbar >
           <Nav className="" navbar >
             <NavItem>
-              <Link to="/projects">
-                <NavLink>Projects</NavLink>
+              <Link to="/portfolio">
+                <NavLink>Portfolio</NavLink>
               </Link>
             </NavItem>
             <NavItem>

@@ -27,9 +27,9 @@ tools:
   - Javascript / NodeJS
   - Go
 relatedLinks:
-  - link: '/projects/MSDP 2'
+  - link: '/portfolio/MSDP 2'
     text: Learn about the MSDP program
-  - link: '/projects/MSDP.app'
+  - link: '/portfolio/MSDP.app'
     text: Learn about the MSDP website
 more:
   - link: 'https://www.msdp.app'

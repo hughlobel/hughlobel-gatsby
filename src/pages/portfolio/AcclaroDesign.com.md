@@ -19,7 +19,7 @@ tools:
   - Axure
   - Zeplin
 relatedLinks:
-  - link: '/projects/Amplifire'
+  - link: '/portfolio/Amplifire'
     text: Amplifire.com is another project done with Acclaro Design
 more:
   - link: 'https://acclarodesign.com'

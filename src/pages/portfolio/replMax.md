@@ -20,7 +20,7 @@ tools:
   - Express
   - Codemirror
 relatedLinks:
-  - link: '/projects/MSDP 2'
+  - link: '/portfolio/MSDP 2'
     text: Learn about MSDP, Hugh's large-scale multimedia performance platform
 more:
   - link: '#'

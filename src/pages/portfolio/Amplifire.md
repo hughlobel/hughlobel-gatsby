@@ -20,7 +20,7 @@ tools:
   - Axure
   - Zeplin
 relatedLinks:
-  - link: '/projects/AcclaroDesign.com'
+  - link: '/portfolio/AcclaroDesign.com'
     text: The AcclaroDesign.com project page
 more:
   - link: 'https://amplifire.com/'

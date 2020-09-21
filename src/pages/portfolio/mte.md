@@ -20,13 +20,11 @@ tools:
   - Adobe Photoshop
   - Adobe Premiere
 relatedLinks:
-  - link: '#'
+  - link: '/portfolio/MSDP 2'
     text: Learn about the MSDP program
-  - link: '#'
-    text: Learn about the MSDP documentation, education, and social media campaigns
 more:
-  - link: 'https://www.msdp.app'
-    text: Visit the MSDP website
+  - link: 'https://www.patreon.com/musicandtechexplained?fan_landing=true'
+    text: Visit the MT&E patreon
 description: A home-learning education project that provided free classes in the Max 8 language. 
 category: Technology Education
 tags:

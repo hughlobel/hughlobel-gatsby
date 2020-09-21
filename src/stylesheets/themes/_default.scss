@@ -256,6 +256,14 @@ a, button, button span {
   }
   .white {
       color: $white;
+      &.textBorder {
+        -webkit-text-stroke: 1px $white;
+        text-shadow: 4px 2px $black;
+      }
+  }
+  .textBorder {
+    -webkit-text-stroke: 0px $black;
+    text-shadow: 2px 2px $white;
   }
   .innerPage {
       h1, h2, h3, h4, h5, h6, a, p, span {

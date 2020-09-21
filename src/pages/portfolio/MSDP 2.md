@@ -28,9 +28,9 @@ tools:
   - AWS DynamoDB
   - AWS Lambda
 relatedLinks:
-  - link: '/projects/MSDP.app'
+  - link: '/portfolio/MSDP.app'
     text: Learn about the development of the MSDP website on the MSDP.app page
-  - link: '/projects/MSDP Docs and Community/'
+  - link: '/portfolio/MSDP Docs and Community/'
     text: Learn about the MSDP documentation, education, and social media campaigns
 more:
   - link: 'https://www.msdp.app'
