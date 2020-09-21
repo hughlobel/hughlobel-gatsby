@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import VideoBG from '../components/VideoBG'
+import reveal from '../config/revealActions'
 
 import config from '../config/config'
 
@@ -26,14 +27,15 @@ export const ResumePageTemplate = ({
       <section className="heroSection heroVideo" >
         <h2>{title}</h2>
       </section>
-      <VideoBG></VideoBG>
+      <VideoBG video='video1'></VideoBG>
       <section className="">
         <div className="bodyCopy">
           <div>
             <div class="resumeTitle">
               <div className="container">
+                <a href='/img/Hugh_Lobel_Resume.docx'><div {...reveal.slideDefault} ><button className="button-transparent"><span>Download Resume as Word Document</span></button></div></a><br/>
+                <a href='/img/Hugh_Lobel_Resume.pdf' target="_blank"><div {...reveal.slideDefault} ><button className="button-transparent"><span>Download Resume as PDF</span></button></div></a><br />
                 <h2><strong>H U G H&nbsp;&nbsp; L O B E L</strong></h2>
-                <br />
                 {config.contact.map((line) => 
                   <p>{line}</p>
                 )}
@@ -42,15 +44,25 @@ export const ResumePageTemplate = ({
             </div>
             <div class="resumeDevWork">
               <div className="container">
-                <br />
-                <h3><strong><u>Development Work</u></strong></h3>
+                <h3><strong><u>Professional Experience</u></strong></h3>
                 <br />
                 {devWork.map((job) => 
                   <div>
-                    <p><strong>{job.date}</strong></p>
-                    <p>{job.company}</p>
+                    <p><strong>{job.company}. {job.location}. {job.date}</strong></p>
                     <p>{job.description}</p>
-                    <p>{job.location}</p>
+                    <br />
+                  </div>
+                )}
+              </div>
+            </div>
+            <div class="resumeResearch">
+              <div className="container">
+                <h3><strong><u>Selected Research, and Open-Source Software Development</u></strong></h3>
+                <br />
+                {openSource.map((proj) => 
+                  <div>
+                    <p><strong>{proj.name}. {proj.date}.</strong></p>
+                    <p>{proj.description}</p>
                     <br />
                   </div>
                 )}
@@ -58,18 +70,14 @@ export const ResumePageTemplate = ({
             </div>
             <div class="resumeExperience">
               <div className="container">
-                <br />
                 <h3><strong><u>Experience</u></strong></h3>
                 <br />
                 {experience.map((cat) => 
                   <div>
                     <p><strong>{cat.title}</strong></p>
-                    <div>
-                      {cat.elements.map((item) =>
-                        <p class='inlineList'>{item},&nbsp;</p>
-                      )}
-                    </div>
-                    <br />
+                    {cat.elements.map((item) =>
+                      <p class='inlineList'>{item}</p>
+                    )}
                   </div>
                 )}
               </div>
@@ -82,7 +90,6 @@ export const ResumePageTemplate = ({
                 {teaching.map((uni) => 
                   <div>
                     <p><strong>{uni.location}</strong></p>
-                    <br />
                     {uni.section.map((dept) => 
                       <div>
                         <div>
@@ -90,39 +97,9 @@ export const ResumePageTemplate = ({
                           {dept.courseList.map((cl) => 
                             <p><strong>{cl.num}: </strong>{cl.name}. {cl.date}</p>
                           )}
-                          <br />
                         </div>
                       </div>
                     )}
-                    <br />
-                  </div>
-                )}
-              </div>
-            </div>
-            <div class="resumeResearch">
-              <div className="container">
-                <br />
-                <h3><strong><u>Open Source and Research Development</u></strong></h3>
-                <br />
-                {openSource.map((proj) => 
-                  <div>
-                    <p><strong>{proj.date}</strong></p>
-                    <p>{proj.name}</p>
-                    <p>{proj.description}</p>
-                    <br />
-                  </div>
-                )}
-              </div>
-            </div>
-            <div class="resumePresentations">
-              <div className="container">
-                <br />
-                <h3><strong><u>Selected Workshops and Presentations</u></strong></h3>
-                <br />
-                {presentations.map((event) => 
-                  <div>
-                    <p>{event.event}</p>
-                    <br />
                   </div>
                 )}
               </div>
@@ -134,11 +111,7 @@ export const ResumePageTemplate = ({
                 <br />
                 {education.map((degree) => 
                   <div>
-                    <p><i>{degree.school}</i></p>
-                    <p>{degree.degree}</p>
-                    <p>{degree.date}</p>
-                    <p>{degree.other}</p>
-                    <br />
+                    <p><strong>{degree.school}.</strong> {degree.degree} - {degree.date}</p>
                   </div>
                 )}
               </div>

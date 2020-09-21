@@ -51,68 +51,64 @@ export const AboutPageTemplate = ({
   return (
     <div class="aboutPage">
       <ImageBG image='hughAbout.jpg' title={title} light='true' />
-      {/* <section className="heroSection heroVideo" >
-        <h2 {...reveal.slideDefault} >{title}</h2>
-      </section> */}
-      {/* <VideoBG></VideoBG> */}
       <section className='contentSection gridCenter'>
         <div className="container gridCenter" >
           <div class='gridCenter'>
-            <h2 className='perfectCenter' >{introTitle}</h2>
+            <h2 {...reveal.slideDefault} className='perfectCenter' >{introTitle}</h2>
             <div className='imageContainer'>
-              <img src={`/img/${introImage}`} />
+              <img {...reveal.slideDefault} src={`/img/${introImage}`} />
             </div>
-            <h3 className='perfectCenter' >{introCopy}</h3>
+            <h3 {...reveal.slideDefault} className='perfectCenter' >{introCopy}</h3>
           </div>
         </div>
       </section>
       <section className='contentSection gridCenter' style={bgSection1}>
         <div className="container-full gridCenter" >
           <div class='gridCenter'>
-            <h2 className='perfectCenter textBorder' >{work1Title}</h2>
-            <p className='perfectCenter textBorder' >{work1Copy}</p>
+            <h2 {...reveal.slideDefault} className='perfectCenter textBorder' >{work1Title}</h2>
+            <p {...reveal.slideDefault} className='perfectCenter textBorder' >{work1Copy}</p>
           </div>
         </div>
       </section>
       <section className='contentSection gridCenter' style={bgSection2}>
         <div className="container-full gridCenter" >
           <div class='gridCenter'>
-            <h2 className='perfectCenter white textBorder' >{work2Title}</h2>
-            <p className='perfectCenter white textBorder' >{work2Copy}</p>
+            <h2 {...reveal.slideDefault} className='perfectCenter white textBorder' >{work2Title}</h2>
+            <p {...reveal.slideDefault} className='perfectCenter white textBorder' >{work2Copy}</p>
           </div>
         </div>
       </section>
       <section className='contentSection gridCenter' style={bgSection3}>
         <div className="container-full gridCenter" >
           <div class='gridCenter'>
-            <h2 className='perfectCenter textBorder' >{backgroundTitle}</h2>
-            <p className='perfectCenter textBorder' >{backgroundCopy}</p>
+            <h2 {...reveal.slideDefault} className='perfectCenter textBorder' >{backgroundTitle}</h2>
+            <p {...reveal.slideDefault} className='perfectCenter textBorder' >{backgroundCopy}</p>
           </div>
         </div>
       </section>
       <section className='contentSection gridCenter backgroundSection'>
         <div className="container gridCenter" >
-          <h2 className='perfectCenter' >{devPathTitle}</h2>
-          <p className='perfectCenter' >{devPathCopy}</p>
+          <h2 {...reveal.slideDefault} className='perfectCenter' >{devPathTitle}</h2>
+          <p {...reveal.slideDefault} className='perfectCenter' >{devPathCopy}</p>
           <div className='gridCenter twoColumns listSection'>
             <div className='gridCenter'>
               {devPathList.map((event) => 
                 <ul>
-                  <li className=''>{event}</li>
+                  <li {...reveal.slideDefault} className=''>{event}</li>
                 </ul>
               )}
             </div>
             <div className="gridCenter">
-              <img className="gridCenter"src={`/img/${devPathImage}`} />
+              <img {...reveal.slideDefault} className="gridCenter"src={`/img/${devPathImage}`} />
             </div>
           </div>
-          <p className='perfectCenter' >{devPathOutro}</p>
+          <p {...reveal.slideDefault} className='perfectCenter' >{devPathOutro}</p>
         </div>
       </section>
       <section className='contentSection gridCenter' style={bgSection4}>
         <div className="container-full gridCenter" >
-          <h2 className='perfectCenter textBorder' >{learnMoreTitle}</h2>
-          <p className='perfectCenter textBorder' >{learnMoreCopy}</p>
+          <h2 {...reveal.slideDefault} className='perfectCenter textBorder' >{learnMoreTitle}</h2>
+          <p {...reveal.slideDefault} className='perfectCenter textBorder' >{learnMoreCopy}</p>
           <Link to="/portfolio"><div><button className="button-transparent"><span>Explore Portfolio</span></button></div></Link>
         </div>
       </section>

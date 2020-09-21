@@ -2,6 +2,7 @@
 module.exports = {
   "slideDefault": {
     'data-sal':"slide-up",
+    'data-sal-delay': "100",
     'data-sal-duration': "750",
     'data-sal-easing': "ease"
   },
