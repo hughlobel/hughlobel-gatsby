@@ -35,27 +35,29 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
-    <section className="fullScreen homeScreen">
-        <div className="fullRow">
-          <div className="twoColumns featuredProjects" >
-            <div class="featuredTitle" {...reveal.slideDefault} ><h2>Featured Projects</h2></div>
-            <a className="featuredOne" style={ sectionStyle }>
-              <Link to={`/portfolio/MSDP 2`} className="perfectCenter">
-                  <h3 className="white">MSDP 2</h3><br />
-                  <p className="white category">Software</p><br />
-                  <p className="white">The Music and Sound Design Platform (MSDP) is a free and open-source platform for Multimedia Synthesis, Design, and Performance.</p>
-              </Link>
-            </a>
-            <a className="featuredFrontTwo" style={ sectionStyle2 }>
-              <Link to={`/portfolio/Amplifire`} className="perfectCenter">
-                <h3 className='textBorder'>Amplifire</h3><br /> 
-                <p className="category textBorder">Web App Development</p><br />
-                <p className='textBorder'>Front-end development for a redesign of their flagship platform.</p>
-              </Link>
-            </a>
+    <ClientOnly>
+      <section className="fullScreen homeScreen">
+          <div className="fullRow">
+            <div className="twoColumns featuredProjects" >
+              <div class="featuredTitle" {...reveal.slideDefault} ><h2>Featured Projects</h2></div>
+              <a className="featuredOne" style={ sectionStyle }>
+                <Link to={`/portfolio/MSDP 2`} className="perfectCenter">
+                    <h3 className="white">MSDP 2</h3><br />
+                    <p className="white category">Software</p><br />
+                    <p className="white">The Music and Sound Design Platform (MSDP) is a free and open-source platform for Multimedia Synthesis, Design, and Performance.</p>
+                </Link>
+              </a>
+              <a className="featuredFrontTwo" style={ sectionStyle2 }>
+                <Link to={`/portfolio/Amplifire`} className="perfectCenter">
+                  <h3 className='textBorder'>Amplifire</h3><br /> 
+                  <p className="category textBorder">Web App Development</p><br />
+                  <p className='textBorder'>Front-end development for a redesign of their flagship platform.</p>
+                </Link>
+              </a>
+            </div>
           </div>
-        </div>
-    </section>
+      </section>
+    </ClientOnly>
     <section class="manifestoSection">
       <div className='container manifestoContent'>
         <h2 {...reveal.slideDefault} >{manifestoSection}</h2>
