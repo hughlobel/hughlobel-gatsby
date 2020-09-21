@@ -5,19 +5,15 @@ import { Link, graphql } from 'gatsby'
 import ClientOnly from '../components/ClientOnly'
 import Layout from '../components/Layout'
 import VideoBG from '../components/VideoBG'
-import config from '../config/config'
-import projects from '../config/projects'
 import reveal from '../config/revealActions'
 
-const fp1 = projects.find(project => project.title === config.featuredProject1);
 const sectionStyle = {
-  backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/img/" + fp1.image + "')",
+  backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/img/movingparts.gif')",
   backgroundSize: "cover"
 }
 // Once grabbed, setup CSS for featured Section based on preview images
-const fp2 = projects.find(project => project.title === config.featuredProject2);
 const sectionStyle2 = {
-  backgroundImage: "linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8)), url('/img/" + fp2.image + "')",
+  backgroundImage: "linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('/img/ampPlat2.jpg')",
   backgroundSize: "cover"
 }
 
@@ -39,29 +35,27 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
-    <ClientOnly>
     <section className="fullScreen homeScreen">
         <div className="fullRow">
           <div className="twoColumns featuredProjects" >
             <div class="featuredTitle" {...reveal.slideDefault} ><h2>Featured Projects</h2></div>
             <a className="featuredOne" style={ sectionStyle }>
-              <Link to={`/portfolio/${fp1.title}`} className="perfectCenter">
-                  <h3 className="white">{fp1.title}</h3><br />
-                  <p className="white category">{fp1.category}</p><br />
-                  <p className="white">{fp1.excerpt}</p>
+              <Link to={`/portfolio/MSDP 2`} className="perfectCenter">
+                  <h3 className="white">MSDP 2</h3><br />
+                  <p className="white category">Software</p><br />
+                  <p className="white">The Music and Sound Design Platform (MSDP) is a free and open-source platform for Multimedia Synthesis, Design, and Performance.</p>
               </Link>
             </a>
             <a className="featuredFrontTwo" style={ sectionStyle2 }>
-              <Link to={`/portfolio/${fp2.title}`} className="perfectCenter">
-                <h3>{fp2.title}</h3><br /> 
-                <p className="category">{fp2.category}</p><br />
-                <p>{fp2.excerpt}</p>
+              <Link to={`/portfolio/Amplifire`} className="perfectCenter">
+                <h3 className='textBorder'>Amplifire</h3><br /> 
+                <p className="category textBorder">Web App Development</p><br />
+                <p className='textBorder'>Front-end development for a redesign of their flagship platform.</p>
               </Link>
             </a>
           </div>
         </div>
     </section>
-    </ClientOnly>
     <section class="manifestoSection">
       <div className='container manifestoContent'>
         <h2 {...reveal.slideDefault} >{manifestoSection}</h2>

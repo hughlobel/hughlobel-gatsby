@@ -1,9 +1,11 @@
 ---
 templateKey: projects-post
 title: Music and Tech Explained
-date: 2020-12-17T15:04:10.000Z
+date: 2020-12-18T15:04:10.000Z
 featuredpost: true
 featuredimage: /img/mteBanner.jpg
+description: A home-learning education project that provided free classes in the Max 8 language. 
+category: Technology Education
 imageUrl: mteBanner.jpg
 imageAlt: mteBanner.jpg
 concepts:
@@ -25,8 +27,6 @@ relatedLinks:
 more:
   - link: 'https://www.patreon.com/musicandtechexplained?fan_landing=true'
     text: Visit the MT&E patreon
-description: A home-learning education project that provided free classes in the Max 8 language. 
-category: Technology Education
 tags:
   - multimedia software
   - music software

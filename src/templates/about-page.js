@@ -56,12 +56,14 @@ export const AboutPageTemplate = ({
       </section> */}
       {/* <VideoBG></VideoBG> */}
       <section className='contentSection gridCenter'>
-        <div className="container-full gridCenter twoColumns" >
+        <div className="container gridCenter" >
           <div class='gridCenter'>
             <h2 className='perfectCenter' >{introTitle}</h2>
+            <div className='imageContainer'>
+              <img src={`/img/${introImage}`} />
+            </div>
             <h3 className='perfectCenter' >{introCopy}</h3>
           </div>
-          <img src={`/img/${introImage}`} />
         </div>
       </section>
       <section className='contentSection gridCenter' style={bgSection1}>
@@ -89,18 +91,20 @@ export const AboutPageTemplate = ({
         </div>
       </section>
       <section className='contentSection gridCenter backgroundSection'>
-        <div className="container-full gridCenter" >
+        <div className="container gridCenter" >
           <h2 className='perfectCenter' >{devPathTitle}</h2>
           <p className='perfectCenter' >{devPathCopy}</p>
           <div className='gridCenter twoColumns listSection'>
-            <div>
+            <div className='gridCenter'>
               {devPathList.map((event) => 
                 <ul>
                   <li className=''>{event}</li>
                 </ul>
               )}
             </div>
-            <img src={`/img/${devPathImage}`} />
+            <div className="gridCenter">
+              <img className="gridCenter"src={`/img/${devPathImage}`} />
+            </div>
           </div>
           <p className='perfectCenter' >{devPathOutro}</p>
         </div>

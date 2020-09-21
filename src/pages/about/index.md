@@ -27,13 +27,13 @@ devPathCopy: >
   Building software felt a lot like composing music - in fact, Hugh found that he was going through the same processes to tackle projects in both domains: 
 devPathImage: hugh_1a.jpg
 devPathList:
-  - Identify a challenge,
-  - Consider various routes to a solution before determining the best route,
-  - Break down the process into smaller steps to tackle, 
-  - Work on each step towards a first draft, 
-  - Procure meaningful peer review while iterating on individual steps, 
-  - After thorough reviews, present the project to a test group for feedback, 
-  - Review feedback and make final revisions before launching the project into the wild.
+  - Identify a challenge
+  - Consider various routes to a solution before determining the best route
+  - Break down the process into smaller steps to tackle
+  - Work on each step towards a first draft
+  - Procure meaningful peer review while iterating on individual steps
+  - After thorough reviews, present the project to a test group for feedback
+  - Review feedback and make final revisions before launching the project into the wild
 devPathOutro: >
   Of course, Hugh would have used different terminology to describe this process before he broke into the development world, but the process was there none-the-less.
 

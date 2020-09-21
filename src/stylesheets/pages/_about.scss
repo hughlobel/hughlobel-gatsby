@@ -12,13 +12,23 @@
             background-size: cover;
             background-position: 50%;
             min-height: calc(100vh - 60px);
+            .imageContainer {
+                max-width: 800px;
+                margin: auto;
+                margin-bottom: 25px;
+            }
+            img {
+                width: 100%;
+                border-radius: 10px;
+                box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.5);
+            }
             &.backgroundSection {
                 p {font-size: 1.5rem; margin-bottom: 35px; text-align: left; line-height: 1.6;}
             }
             .listSection {
                 margin-top: 5px;
                 margin-bottom: 60px;
-                ul {list-style: disc; padding-right: 20px;}
+                ul {list-style: disc;}
                 img {width: 100%;}
                 
             }
