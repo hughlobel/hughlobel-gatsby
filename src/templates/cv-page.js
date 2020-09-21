@@ -34,7 +34,7 @@ export const CVPageTemplate = ({
       <section className="heroSection heroVideo" >
         <h2>{title}</h2>
       </section>
-      <VideoBG></VideoBG>
+      <VideoBG video='video3'></VideoBG>
       <section className="">
         <div className="bodyCopy">
           <div>
