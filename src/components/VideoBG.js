@@ -13,17 +13,19 @@ class VideoBG extends Component {
     }
     let vidNum = vidRan(config.vidCount)
     let vidName = !this.props.video ? `video${vidNum}` : this.props.video
-    
+    let vidName2 = !this.props.videoMobile ? this.props.video : this.props.videoMobile
     return (
       <section class="videoHero">
         {!this.props.loop && 
           <video className='videoTag' poster='img/default.jpg' autoPlay muted>
-            <source src={`img/${vidName}.mp4`} type='video/mp4' media="all and (max-width: 480px)"/>
+            <source src={`img/${vidName}.mp4`} type='video/mp4' media="screen and (min-width: 768px)"/>
+            <source src={`img/${vidName2}.mp4`} type='video/mp4'/>
           </video>
         }
         {this.props.loop && 
           <video className='videoTag' poster='img/default.jpg' autoPlay muted loop>
-            <source src={`img/${vidName}.mp4`} type='video/mp4' media="all and (max-width: 480px)" />
+            <source src={`img/${vidName}.mp4`} type='video/mp4' media="screen and (min-width: 768px)" />
+            <source src={`img/${vidName2}.mp4`} type='video/mp4'/>
           </video>
         }
           

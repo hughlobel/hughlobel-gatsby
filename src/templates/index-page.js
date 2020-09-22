@@ -24,7 +24,7 @@ export const IndexPageTemplate = ({
   bioSection
 }) => (
   <div class="homePage">
-    <VideoBG video="homeVideo" loop='true'></VideoBG>
+    <VideoBG video="homeVideo" videoMobile="homeVideoMobile" loop='true'></VideoBG>
     <section class="titleSection">
       <div className='container-full titleContent twoColumns-6-4 gridCenter'>
         <div {...reveal.slideDefault} className='gridCenter container'>
