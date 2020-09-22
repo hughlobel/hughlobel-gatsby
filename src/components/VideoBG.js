@@ -18,14 +18,12 @@ class VideoBG extends Component {
       <section class="videoHero">
         {!this.props.loop && 
           <video className='videoTag' poster='img/default.jpg' autoPlay muted>
-            <source src={`img/${vidName}.mp4`} type='video/mp4' media="screen and (min-width: 768px)"/>
-            <source src={`img/${vidName2}.mp4`} type='video/mp4'/>
+            <source src={`img/${vidName}.mp4`} type='video/mp4'/>
           </video>
         }
         {this.props.loop && 
           <video className='videoTag' poster='img/default.jpg' autoPlay muted loop>
-            <source src={`img/${vidName}.mp4`} type='video/mp4' media="screen and (min-width: 768px)" />
-            <source src={`img/${vidName2}.mp4`} type='video/mp4'/>
+            <source src={`img/${vidName}.mp4`} type='video/mp4'/>
           </video>
         }
           

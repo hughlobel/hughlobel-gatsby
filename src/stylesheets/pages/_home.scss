@@ -9,13 +9,13 @@
         min-height: calc(100vh - 60px);
         display:grid;
         place-content: center;
+        background-color: #080205;
         // height:calc(100vh - 60px);
         video {
         position: fixed;
         top: 60px;
         right: 0;
-        min-width: 102%;
-        min-height: 100%;
+        height: calc( 100% - 60px );
         transform: translateX(calc((100% - 100vw) / 2));
         }
         .heroTitle {
