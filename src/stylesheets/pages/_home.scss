@@ -112,7 +112,8 @@
             color: $black;
         }
         &.fullScreen {
-            height: calc(100vh - 60px);
+            min-height: calc(100vh - 60px);
+            height: auto;
         }
         .moreLinks {
             justify-content: center;
@@ -140,6 +141,7 @@
             @media screen and (max-width: $break-small) {
                 display: block;
                 margin-top: 20px;
+                margin-bottom: 20px;
             }
         }
         h3 {
@@ -197,6 +199,8 @@
                     clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)
                 ), webkit moz);
                 @media screen and (max-width: $break-small) {
+                    padding-top: 70px;
+                    padding-bottom: 50px;
                     @include prefix((
                     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
                     ), webkit moz);
@@ -235,6 +239,8 @@
                     @include prefix((
                     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
                     ), webkit moz);
+                    padding-top: 70px;
+                    padding-bottom: 50px;
                 }
                 margin-left: -20%;
                 .featuredContent {
