@@ -105,9 +105,15 @@ a, button, button span {
 .twoColumns > div {
     &:first-child {
         padding-right: 7%;
+        @media screen and (max-width: $break-small) {
+            padding-right: 0;
+        }
     }
     &:last-child {
         padding-left: 7%; 
+        @media screen and (max-width: $break-small) {
+            padding-left: 0;
+        }
     }
 }
 .fullScreen div {

@@ -17,8 +17,8 @@ class ProjectRoll extends React.Component {
             <div>
               <div className="fullWidth singleProject" {...reveal.fadeDefault}>
                 {index%2 === 0 && 
-                  <Link to={post.fields.slug} className="twoColumns fillContainer projectBG" style={{backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.95) 65%),url("/img/${post.frontmatter.imageUrl}")`}}>
-                    <div class=""></div>
+                  <Link to={post.fields.slug} className="twoColumns fillContainer projectBG" style={{backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.75) 65%),url("/img/${post.frontmatter.imageUrl}")`}}>
+                    <div class="hideOnMobile"></div>
                     <div className="perfectCenter oddProject">
                       <h2 {...reveal.slideDefault}>{post.frontmatter.title}</h2>
                       <span {...reveal.slideDefault}>{post.frontmatter.category}</span>
@@ -28,7 +28,7 @@ class ProjectRoll extends React.Component {
                   </Link>
                 }
                 {index%2 === 1 && 
-                  <Link to={post.fields.slug} className="twoColumns fillContainer projectBG" style={{backgroundImage: `linear-gradient(45deg, rgba(255,255,255,0.95) 45%, rgba(0,0,0,0) 60%),url("/img/${post.frontmatter.imageUrl}")`}}>
+                  <Link to={post.fields.slug} className="twoColumns fillContainer projectBG" style={{backgroundImage: `linear-gradient(45deg, rgba(255,255,255,0.75) 45%, rgba(0,0,0,0) 60%),url("/img/${post.frontmatter.imageUrl}")`}}>
                     <div className="perfectCenter evenProject" {...reveal.fadeDefault}>
                       <h2 {...reveal.slideDefault}>{post.frontmatter.title}</h2>
                       <span {...reveal.slideDefault}>{post.frontmatter.category}</span>

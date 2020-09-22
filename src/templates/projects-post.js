@@ -34,7 +34,7 @@ export const ProjectsPostTemplate = ({
       <ImageBG image={imageUrl} title={title} category={category} description={description} />
       <div>
         <section className="projectContent">
-          <div className="container" {...reveal.fadeDefault}>
+          <div className="container">
             <PostContent content={content} />
           </div>
         </section>

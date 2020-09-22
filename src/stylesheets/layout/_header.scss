@@ -61,6 +61,12 @@ a:hover, a:active {
 	.navbar-brand {
 		font-family: $title-font-stack;
 		font-size: 25px;
+		@media screen and (max-width: $break-small) {
+			font-size: 1.2rem;
+			span {
+				display: none;
+			}
+		}
 		color: $white !important;
 		background-color: $black;
 		clip-path: polygon(0% 0%, 100% 0%, 93% 100%, 0% 100%);
@@ -109,23 +115,6 @@ a:hover, a:active {
 		float: right;
 		margin-top: 14px;
 		margin-right: 20px;
-		// &:before {
-		// 	font-family: "Font Awesome 5 Free";
-		// 	content: "\f0c9";
-		// 	width:100%;
-		// 	font-size: 25px;
-		// }
-		// &:after {
-		// 	content: "";
-		// }
-		// &:hover {
-		// 	&:after {
-		// 		height: 0;
-		// 	}
-		// 	&:before {
-		// 		height: 0;
-		// 	}
-		// }
 	}
 	ul {
 		display: none;

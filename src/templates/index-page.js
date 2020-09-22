@@ -45,6 +45,7 @@ export const IndexPageTemplate = ({
                     <h3 className="white">MSDP 2</h3><br />
                     <p className="white category">Software</p><br />
                     <p className="white">The Music and Sound Design Platform (MSDP) is a free and open-source platform for Multimedia Synthesis, Design, and Performance.</p>
+                    <div><button className="button-transparent button-white"><span>More</span></button></div>
                 </Link>
               </a>
               <a className="featuredFrontTwo" style={ sectionStyle2 }>
@@ -52,6 +53,7 @@ export const IndexPageTemplate = ({
                   <h3 className='textBorder'>Amplifire</h3><br /> 
                   <p className="category textBorder">Web App Development</p><br />
                   <p className='textBorder'>Front-end development for a redesign of their flagship platform.</p>
+                  <div><button className="button-transparent"><span>More</span></button></div>
                 </Link>
               </a>
             </div>

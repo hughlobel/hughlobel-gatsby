@@ -3,11 +3,34 @@
         min-height: calc(50vh - 60px);
         padding-top: 80px;
         padding-bottom: 80px;
-        h2 {font-size: 3rem; margin-bottom: 35px;}
-        p {font-size: 2rem; margin-bottom: 35px;}
+        h2 {
+            font-size: 3rem; 
+            margin-bottom: 35px;
+            @media screen and (max-width: $break-small) {
+                font-size: 2rem;
+            }
+            @media screen and (max-width: $break-small) {
+                font-size: 1.7rem;
+            }
+        }
+        p {
+            font-size: 2rem; 
+            margin-bottom: 35px;
+            @media screen and (max-width: $break-small) {
+                font-size: 1.5rem;
+            }
+        }
         &.contentSection {
-            h3 {font-size: 2rem; margin-bottom: 35px;}
-            p {font-size: 2rem; margin-bottom: 35px;}
+            h3, p {
+                font-size: 2rem; 
+                margin-bottom: 35px;
+                @media screen and (max-width: $break-small) {
+                    font-size: 1.5rem;
+                }
+                @media screen and (max-width: $break-phone) {
+                    font-size: 1.2rem;
+                }
+            }
             a {text-align: center;}
             background-size: cover;
             background-position: 50%;
@@ -23,12 +46,25 @@
                 box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.5);
             }
             &.backgroundSection {
-                p {font-size: 1.5rem; margin-bottom: 35px; text-align: left; line-height: 1.6;}
+                p {
+                    font-size: 1.5rem; 
+                    margin-bottom: 35px; 
+                    text-align: left; 
+                    line-height: 1.6;
+                    @media screen and (max-width: $break-small) {
+                        font-size: 1.2rem;
+                    }
+                }
             }
             .listSection {
                 margin-top: 5px;
                 margin-bottom: 60px;
-                ul {list-style: disc;}
+                ul {
+                    list-style: disc;
+                    @media screen and (max-width: $break-small) {
+                        padding-left: 5%;
+                    }
+                }
                 img {width: 100%;}
                 
             }
@@ -54,6 +90,9 @@
             font-size: 4rem;
             font-weight: 300;
             margin-bottom: 1.7rem;
+            @media screen and (max-width: $break-small) {
+                font-size: 2rem;
+            }
         }
     }
     .imageHero {
@@ -69,7 +108,16 @@
             -webkit-text-stroke: 0px $black;
             // text-shadow: 4px 2px $black;
         }
-        h1 {font-size: 5rem; margin-bottom: 30px;}
+        h1 {
+            font-size: 5rem; 
+            margin-bottom: 30px;
+            @media screen and (max-width: $break-small) {
+                font-size: 3rem;
+            }
+            @media screen and (max-width: $break-small) {
+                font-size: 2rem;
+            }
+        }
         span {font-size: 2rem; margin-bottom: 30px;}
         p {font-size: 2.5rem;}
         }

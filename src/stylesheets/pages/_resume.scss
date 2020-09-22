@@ -1,5 +1,16 @@
 section#main .resumePage, section#main .cvPage {
-    p {font-size: 1.5rem; margin-bottom: 10px;}
+    p {
+        font-size: 1.5rem; 
+        margin-bottom: 10px;
+        @media screen and (max-width: $break-small) {
+            font-size: 1.2rem;
+        } 
+    }
     h2 {margin-bottom: 10px;}
-    h3 {font-size: 2.5rem;}
+    h3 {
+        font-size: 2.5rem;
+        @media screen and (max-width: $break-small) {
+            font-size: 1.8rem;
+        } 
+    }
 }

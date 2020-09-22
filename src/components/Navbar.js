@@ -37,7 +37,7 @@ const AppNavbar = class extends React.Component {
     <Navbar expand="md">
       <Container fluid >
         <ClientOnly>
-          <NavbarBrand><Link to="/">{config.siteTitle} | <span>{config.siteSubtitle}</span></Link></NavbarBrand>
+          <NavbarBrand><Link to="/">{config.siteTitle} <span>| {config.siteSubtitle}</span></Link></NavbarBrand>
         </ClientOnly>
         <NavbarToggler onClick={this.toggle} />
         <FontAwesomeIcon icon={faBars} className="menuBars" />
