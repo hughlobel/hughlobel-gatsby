@@ -1,7 +1,7 @@
 ---
 templateKey: projects-post
 title: AcclaroDesign.com
-date: 2020-12-20T15:04:10.000Z
+date: 2020-09-20T16:04:10.000Z
 featuredpost: true
 featuredimage: /img/acclaroImage2.jpg
 imageUrl: acclaroImage2.jpg

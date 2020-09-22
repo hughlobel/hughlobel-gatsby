@@ -1,7 +1,7 @@
 ---
 templateKey: projects-post
 title: Music and Tech Explained
-date: 2020-12-18T15:04:10.000Z
+date: 2020-09-19T15:04:10.000Z
 featuredpost: true
 featuredimage: /img/mteBanner.jpg
 description: A home-learning education project that provided free classes in the Max 8 language. 

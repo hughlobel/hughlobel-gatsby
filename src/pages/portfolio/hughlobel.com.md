@@ -1,7 +1,7 @@
 ---
 templateKey: projects-post
 title: HughLobel.com
-date: 2020-12-17T15:04:10.000Z
+date: 2020-09-22T10:04:10.000Z
 featuredpost: true
 featuredimage: /img/2020websnap.jpg
 imageUrl: 2020websnap.jpg

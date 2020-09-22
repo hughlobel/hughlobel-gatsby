@@ -1,11 +1,11 @@
 ---
 templateKey: projects-post
 title: replMax
-date: 2020-12-17T15:04:10.000Z
+date: 2020-09-16T15:04:10.000Z
 featuredpost: true
 featuredimage: /img/replMaxPhoto.png
 imageUrl: replMaxPhoto.png
-imageAlt: book-computer-designC.jpg
+imageAlt: replMaxPhoto.png
 description: replMax aims to wed the robust multimedia toolkit available in Cycling ’74’s Max 8 with the dynamic fun of a live-coding environment.
 category: Software
 concepts:

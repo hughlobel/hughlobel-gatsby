@@ -1,7 +1,7 @@
 ---
 templateKey: projects-post
 title: Amplifire Learning Platform
-date: 2020-12-20T15:04:10.000Z
+date: 2020-09-21T15:05:10.000Z
 featuredpost: true
 featuredimage: /img/ampPlat1.jpg
 imageUrl: ampPlat2.jpg

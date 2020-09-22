@@ -1,7 +1,7 @@
 ---
 templateKey: projects-post
 title: MSDP 2
-date: 2020-12-17T15:04:10.000Z
+date: 2020-09-20T15:04:10.000Z
 featuredpost: true
 featuredimage: /img/msdp_2.0_banner.jpg
 imageUrl: movingparts.gif

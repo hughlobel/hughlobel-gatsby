@@ -1,7 +1,7 @@
 ---
 templateKey: projects-post
 title: MSDP.app
-date: 2020-12-17T15:04:10.000Z
+date: 2020-09-18T15:04:10.000Z
 featuredpost: true
 featuredimage: /img/msdp_2.0_banner.jpg
 imageUrl: msdpSiteImage1.jpg
