@@ -18,7 +18,7 @@ class ImageBG extends Component {
     return (
       <section class="imageHero" {...reveal.fadeDefault}>
         <div className="heroImage gridCenter" style={ sectionStyle }>
-          <div className="container perfectCenter">
+          <div className="container-full perfectCenter">
             <h1 className={textColor} {...reveal.slideDefault} >{this.props.title}</h1>
             <span  className="white" {...reveal.slideDefault} >{this.props.category}</span>
             <p  className="white" {...reveal.slideDefault} >{this.props.description}</p>

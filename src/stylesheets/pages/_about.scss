@@ -48,6 +48,9 @@
                 @media screen and (max-width: $break-large) {
                     width: 50%;
                 }
+                @media screen and (max-width: $break-small) {
+                    width: 100%;
+                }
             }
             &.backgroundSection {
                 p {

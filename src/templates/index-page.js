@@ -76,7 +76,7 @@ export const IndexPageTemplate = ({
       </div>
     </section>
     <section class="bioSection">
-      <div className='container bioContent'>
+      <div className='container-full bioContent'>
         <h2 {...reveal.slideDefault} >About Hugh Lobel</h2>
         <p className='bioContent' {...reveal.slideDefault}>{bioSection}</p>
         <div className="actionCall threeColumns">
