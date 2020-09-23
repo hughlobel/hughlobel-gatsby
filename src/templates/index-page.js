@@ -30,7 +30,7 @@ export const IndexPageTemplate = ({
         <div {...reveal.slideDefault} className='gridCenter container'>
           <h2 className='titleTag leftAlign'>{tagline}</h2>
         </div>
-        <div className="titleImage" {...reveal.slideDefault}>
+        <div className="titleImage gridCenter" {...reveal.slideDefault}>
           <img className='titleImageImage' src={`img/${tagImage}`} alt="Hugh Lobel speaking in the Atlas Building at CU Boulder"/>
         </div>
       </div>

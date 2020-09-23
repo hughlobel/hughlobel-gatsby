@@ -20,7 +20,7 @@
         display:none;
         // cursor: auto;
         width: 50%;
-        @media screen and (max-width: $break-small) {
+        @media screen and (max-width: $break-large) {
             width: 80%;
         }
         margin: auto;
@@ -42,12 +42,15 @@
             color: $white;
             margin-bottom: 10px;
             text-align: center;
-            @media screen and (max-width: $break-small) {
+            @media screen and (max-width: $break-large) {
                 font-size: 1.5rem;
             }
         }
         p {
             font-size: 1.2rem;
+            @media screen and (max-width: $break-large) {
+                font-size: 1rem;
+            }
             font-weight: 500;
             line-height: 1.6rem;
             color: $white;
@@ -71,6 +74,9 @@
                 margin-bottom: 15px;
                 -webkit-font-smoothing: antialiased;
                 font-size: 1.2rem;
+                @media screen and (max-width: $break-large) {
+                    font-size: 1rem;
+                }
             }
             label input, label textarea {
                 padding: 10px;

@@ -19,7 +19,7 @@ class ProjectRoll extends React.Component {
                 {index%2 === 0 && 
                   <Link to={post.fields.slug} className="twoColumns fillContainer projectBG" style={{backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.75) 65%),url("/img/${post.frontmatter.imageUrl}")`}}>
                     <div class="hideOnMobile"></div>
-                    <div className="perfectCenter oddProject">
+                    <div className="perfectCenter oddProject container-full">
                       <h2 {...reveal.slideDefault}>{post.frontmatter.title}</h2>
                       <span {...reveal.slideDefault}>{post.frontmatter.category}</span>
                       <p {...reveal.slideDefault}>{post.frontmatter.description}</p>
@@ -29,7 +29,7 @@ class ProjectRoll extends React.Component {
                 }
                 {index%2 === 1 && 
                   <Link to={post.fields.slug} className="twoColumns fillContainer projectBG" style={{backgroundImage: `linear-gradient(45deg, rgba(255,255,255,0.75) 45%, rgba(0,0,0,0) 60%),url("/img/${post.frontmatter.imageUrl}")`}}>
-                    <div className="perfectCenter evenProject" {...reveal.fadeDefault}>
+                    <div className="perfectCenter evenProject container-full" {...reveal.fadeDefault}>
                       <h2 {...reveal.slideDefault}>{post.frontmatter.title}</h2>
                       <span {...reveal.slideDefault}>{post.frontmatter.category}</span>
                       <p {...reveal.slideDefault}>{post.frontmatter.description}</p>

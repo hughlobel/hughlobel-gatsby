@@ -229,6 +229,9 @@ a, button, button span {
             min-height: auto;
             h1 {
                 font-size: 4rem;
+                @media screen and (max-width: $break-large) {
+                    font-size: 2.5rem;
+                }
             }
         }
     }

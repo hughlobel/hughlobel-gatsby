@@ -34,7 +34,7 @@
         h2 {
             font-size: 3rem;
             margin-bottom: 50px;
-            @media screen and (max-width: $break-small) {
+            @media screen and (max-width: $break-large) {
                 font-size: 2rem;
             }
             @media screen and (max-width: $break-phone) {
@@ -68,7 +68,7 @@
             h3 {
                 font-size: 2.5rem;
                 margin-bottom:30px;
-                @media screen and (max-width: $break-phone) {
+                @media screen and (max-width: $break-large) {
                     font-size: 2rem;
                 }
             }
@@ -146,7 +146,7 @@
         }
         h3 {
             font-size: 4rem;
-            @media screen and (max-width: $break-small) {
+            @media screen and (max-width: $break-large) {
                 font-size: 2.5rem;
             }
         }
@@ -170,6 +170,9 @@
                 max-width:450px;
                 margin: auto;
                 font-size: 32px;
+                @media screen and (max-width: $break-large) {
+                    font-size: 1.2rem;
+                }
                 -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
                 -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
                 box-shadow:
@@ -269,13 +272,14 @@
                 line-height:2.6rem;
                 font-weight: 500;
                 font-size: 2rem;
-                @media screen and (max-width: $break-small) {
+                @media screen and (max-width: $break-large) {
+                    line-height: 1.7rem;
                     font-size: 1.5rem;
                 }
             }
             .category {
                 font-size: 1.5rem;
-                @media screen and (max-width: $break-small) {
+                @media screen and (max-width: $break-large) {
                     font-size: 1.2rem;
                 }
             }

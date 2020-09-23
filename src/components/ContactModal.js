@@ -98,7 +98,7 @@ export default class Modal extends React.Component {
               </label>
               <label>
                 Message
-                <textarea name="message" required rows="8" ></textarea>
+                <textarea name="message" required rows="4" ></textarea>
               </label>
               <button id="formSend" className="button-white button-transparent" onClick={contactFormLoad} type="submit"><span>Send Message</span></button>
             </form>
